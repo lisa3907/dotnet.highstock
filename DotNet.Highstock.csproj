@@ -121,11 +121,15 @@
     <Compile Include="Options\ExportingButtonsPrintButton.cs" />
     <Compile Include="Options\Global.cs" />
     <Compile Include="Options\Labels.cs" />
+    <Compile Include="Options\ButtonsItems.cs" />
     <Compile Include="Options\LabelsItems.cs" />
     <Compile Include="Options\Lang.cs" />
     <Compile Include="Options\Legend.cs" />
     <Compile Include="Options\LegendNavigation.cs" />
     <Compile Include="Options\LegendTitle.cs" />
+    <Compile Include="Options\Navigator.cs" />
+    <Compile Include="Options\Scrollbar.cs" />
+    <Compile Include="Options\RangeSelector.cs" />
     <Compile Include="Options\Loading.cs" />
     <Compile Include="Options\Navigation.cs" />
     <Compile Include="Options\NavigationButtonOptions.cs" />

@@ -9,15 +9,31 @@ namespace DotNet.Highstock.Helpers
     public class Events
     {
         [JsonFormatter("{0}")]
-        public string Click { get; set; }
+        public string Click
+        {
+            get;
+            set;
+        }
 
         [JsonFormatter("{0}")]
-        public string Mouseover { get; set; }
+        public string Mouseover
+        {
+            get;
+            set;
+        }
 
         [JsonFormatter("{0}")]
-        public string Mouseout { get; set; }
+        public string Mouseout
+        {
+            get;
+            set;
+        }
 
         [JsonFormatter("{0}")]
-        public string Mousemove { get; set; }
+        public string Mousemove
+        {
+            get;
+            set;
+        }
     }
 }

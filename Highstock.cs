@@ -50,10 +50,10 @@ namespace DotNet.Highstock
         Legend _Legend;
         Loading _Loading;
         Navigation _Navigation;
-        //Navigator _Navigator;
+        Navigator _Navigator;
         PlotOptions _PlotOptions;
-        //RangeSelector _RangeSelector;
-        //scrollbar _scrollbar;
+        RangeSelector _RangeSelector;
+        Scrollbar _Scrollbar;
         Series _Series;
         Series[] _SeriesArray;
         Subtitle _Subtitle;
@@ -171,6 +171,18 @@ namespace DotNet.Highstock
         }
 
         /// <summary>
+        /// The navigator is a small series below the main series, displaying a view of the entire data set. 
+        /// It provides tools to zoom in and out on parts of the data as well as panning across the dataset.
+        /// </summary>
+        /// <param name="navigator"></param>
+        /// <returns></returns>
+        public Highstock SetNavigator(Navigator navigator)
+        {
+            _Navigator = navigator;
+            return this;
+        }
+
+        /// <summary>
         /// The plotOptions is a wrapper object for config objects for each series type. The config objects for each series 
         /// can also be overridden for each series item as given in the series array.
         /// Configuration options for the series are given in three levels. Options for all series in a chart are given in 
@@ -182,6 +194,30 @@ namespace DotNet.Highstock
         public Highstock SetPlotOptions(PlotOptions plotOptions)
         {
             _PlotOptions = plotOptions;
+            return this;
+        }
+
+        /// <summary>
+        /// The range selector is a tool for selecting ranges to display within the chart. 
+        /// It provides buttons to select preconfigured ranges in the chart, like 1 day, 1 week, 1 month etc. 
+        /// It also provides input boxes where min and max dates can be manually input.
+        /// </summary>
+        /// <param name="rangeSelector"></param>
+        /// <returns></returns>
+        public Highstock SetRangeSelector(RangeSelector rangeSelector)
+        {
+            _RangeSelector = rangeSelector;
+            return this;
+        }
+
+        /// <summary>
+        /// The scrollbar is a means of panning over the X axis of a chart.
+        /// </summary>
+        /// <param name="scrollbar"></param>
+        /// <returns></returns>
+        public Highstock SetScrollbar(Scrollbar scrollbar)
+        {
+            _Scrollbar = scrollbar;
             return this;
         }
 
@@ -399,6 +435,18 @@ namespace DotNet.Highstock
                 options.Append("plotOptions: {0}".FormatWith(JsonSerializer.Serialize(_PlotOptions)), 2);
             }
 
+            if (_RangeSelector != null)
+            {
+                options.AppendLine(", ");
+                options.Append("rangeSelector: {0}".FormatWith(JsonSerializer.Serialize(_RangeSelector)), 2);
+            }
+
+            if (_Scrollbar != null)
+            {
+                options.AppendLine(", ");
+                options.Append("scrollbar: {0}".FormatWith(JsonSerializer.Serialize(_Scrollbar)), 2);
+            }
+
             if (_Subtitle != null)
             {
                 options.AppendLine(", ");
@@ -450,6 +498,12 @@ namespace DotNet.Highstock
             {
                 options.AppendLine(", ");
                 options.Append("navigation: {0}".FormatWith(JsonSerializer.Serialize(_Navigation)), 2);
+            }
+
+            if (_Navigator != null)
+            {
+                options.AppendLine(", ");
+                options.Append("navigator: {0}".FormatWith(JsonSerializer.Serialize(_Navigator)), 2);
             }
 
             if (_Series != null)
