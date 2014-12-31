@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("DotNet.Highstock")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Vangi.NET")]
+[assembly: AssemblyCompany("JACK LEE")]
 [assembly: AssemblyProduct("DotNet.Highstock")]
-[assembly: AssemblyCopyright("Copyright © Vangi.NET 2014")]
+[assembly: AssemblyCopyright("Copyright © JACK LEE 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
