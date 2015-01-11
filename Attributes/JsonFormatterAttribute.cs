@@ -12,6 +12,12 @@ namespace DotNet.Highstock.Attributes
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
     public class JsonFormatterAttribute : Attribute
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="jsonValueFormat"></param>
+        /// <param name="addPropertyName"></param>
+        /// <param name="useCurlyBracketsForObject"></param>
         public JsonFormatterAttribute(string jsonValueFormat = "", bool addPropertyName = true, bool useCurlyBracketsForObject = true)
         {
             JsonFormatter = new JsonFormatter
@@ -22,6 +28,9 @@ namespace DotNet.Highstock.Attributes
             };
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public JsonFormatter JsonFormatter
         {
             get;
