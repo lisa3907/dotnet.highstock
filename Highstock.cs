@@ -379,7 +379,7 @@ namespace DotNet.Highstock
 
             scripts.AppendLine("<script type='text/javascript'>");
             if (Options != null)
-                scripts.AppendLine("Highstock.setOptions({0});".FormatWith(JsonSerializer.Serialize(Options)));
+                scripts.AppendLine("Highcharts.setOptions({0});".FormatWith(JsonSerializer.Serialize(Options)));
 
             scripts.AppendLine("var {0};".FormatWith(Name));
             scripts.AppendLine(!String.IsNullOrEmpty(FunctionName) ? String.Format("function {0}() {{", FunctionName) : "$(document).ready(function() {");
