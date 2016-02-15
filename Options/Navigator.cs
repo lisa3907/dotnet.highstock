@@ -35,7 +35,7 @@ namespace DotNet.Highstock.Options
         /// Enable or disable the navigator. 
         /// Defaults to true.
         /// </summary>
-        [JsonFormatter("{{ {0} }}")]
+        [JsonFormatter("{{ 0 }}")]
         public bool? Enabled
         {
             get;
