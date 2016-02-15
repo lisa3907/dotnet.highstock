@@ -1,16 +1,16 @@
 DotNet.Highstock
 ================
 
-ë³¸ í”„ë¡œì íŠ¸ëŠ” [DotNet.Highcharts](https://dotnethighcharts.codeplex.com)ë¥¼ í™•ì¥ í•œ ê²ƒ ì…ë‹ˆë‹¤.
-ìµíˆ ì•Œê³  ìˆë“¯ì´ ì›¹ í˜ì´ì§€ì— ì°¨íŠ¸ë¥¼ ê·¸ë ¤ ì£¼ëŠ” highchartëŠ” ë§ì€ ì¸ê¸°ë¥¼ ì–»ê³  ìˆëŠ” ì¤‘ ì…ë‹ˆë‹¤.
+º» ÇÁ·ÎÁ§Æ®´Â DotNet.Highcharts(https://dotnethighcharts.codeplex.com)¸¦ È®Àå ÇÑ °Í ÀÔ´Ï´Ù.
+ÀÍÈ÷ ¾Ë°í ÀÖµíÀÌ À¥ ÆäÀÌÁö¿¡ Â÷Æ®¸¦ ±×·Á ÁÖ´Â highchart´Â ¸¹Àº ÀÎ±â¸¦ ¾ò°í ÀÖ´Â Áß ÀÔ´Ï´Ù.
 
-í—ˆë‚˜, ë‹·ë„· c# í”„ë¡œê·¸ë˜ë¨¸ ì¸ ê²½ìš° dotnet.highstockì´ ìœ ìš© í•  ë“¯í•˜ì—¬
-open-sourceì¸ dotnet.highchartsë¥¼ ì´ìš©í•˜ì—¬ DotNet.Highstockì„ ì‘ì„± í•˜ê²Œ ë˜ì—ˆìŠµë‹ˆë‹¤.
+Çã³ª, ´å³İ c# ÇÁ·Î±×·¡¸Ó ÀÎ °æ¿ì dotnet.highstockÀÌ À¯¿ë ÇÒ µíÇÏ¿©
+open-sourceÀÎ dotnet.highcharts¸¦ ÀÌ¿ëÇÏ¿© DotNet.HighstockÀ» ÀÛ¼º ÇÏ°Ô µÇ¾ú½À´Ï´Ù.
 
-ë³¸ í”„ë¡œì íŠ¸ëŠ” 2014/12ì— ì‹œì‘ ë˜ì—ˆìŠµë‹ˆë‹¤.
-ì§€ì†ì ìœ¼ë¡œ ì—…ë°ì´íŠ¸ í•  ê³„íšì´ì˜¤ë‹ˆ ë§ì€ í™œìš© ë°”ëë‹ˆë‹¤.
+º» ÇÁ·ÎÁ§Æ®´Â 2014/12¿¡ ½ÃÀÛ µÇ¾ú½À´Ï´Ù.
+Áö¼ÓÀûÀ¸·Î ¾÷µ¥ÀÌÆ® ÇÒ °èÈ¹ÀÌ¿À´Ï ¸¹Àº È°¿ë ¹Ù¶ø´Ï´Ù.
 
-[Sample Site](http://bpi-chart.bgc-e.com/Default.aspx)
+sample site) http://bpi-chart.bgc-e.com
 
 Donate:
 ======
