@@ -3,8 +3,9 @@
 
   "dependencies": {
     "Microsoft.AspNetCore.Html.Abstractions": "1.1.0",
-    "NETStandard.Library": "1.6.0",
-    "System.Runtime.WindowsRuntime": "4.3.0"
+    "NETStandard.Library": "1.6.1",
+    "System.Drawing-dotnet-core": "1.0.2",
+    "System.Reflection.TypeExtensions": "4.3.0"
   },
 
   "frameworks": {

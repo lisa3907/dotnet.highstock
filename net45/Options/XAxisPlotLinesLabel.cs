@@ -38,11 +38,12 @@ namespace DotNet.HighStock.Options
 		/// </summary>
 		public HorizontalAligns? TextAlign { get; set; }
 
-		/// <summary>
-		/// <p>Whether to <a href='http://docs.highstock.com/#formatting$html'>use HTML</a> to render the labels.
-		/// Default: false
-		/// </summary>
-		public bool? UseHTML { get; set; }
+        /// <summary>
+        /// <p>Whether to <a href='http://docs.highstock.com/#formatting$html'>use HTML</a> to render the labels.
+        /// Default: false
+        /// </p>
+        /// </summary>
+        public bool? UseHTML { get; set; }
 
 		/// <summary>
 		/// Vertical alignment of the label relative to the plot band. Can be one of 'top', 'middle' or 'bottom'.

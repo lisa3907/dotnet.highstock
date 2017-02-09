@@ -1,4 +1,4 @@
-﻿using Windows.UI;
+﻿using System.Drawing;
 using DotNet.HighStock.Attributes;
 using DotNet.HighStock.Enums;
 

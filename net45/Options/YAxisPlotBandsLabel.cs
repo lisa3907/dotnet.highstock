@@ -42,6 +42,7 @@ namespace DotNet.HighStock.Options
 		/// <summary>
 		/// <p>Whether to <a href='http://www.highstock.com/docs/chart-concepts/labels-and-string-formatting#html'>use HTML</a> to render the labels.
 		/// Default: false
+        /// </p>
 		/// </summary>
 		public bool? UseHTML { get; set; }
 

@@ -1,4 +1,4 @@
-﻿using Windows.UI;
+﻿using System.Drawing;
 
 namespace DotNet.HighStock.Helpers
 {

@@ -60,7 +60,7 @@ namespace DotNet.HighStock
                 sb.Append(value.Value.ToString(CultureInfo.InvariantCulture));
         }
 
-        public static void AppendHighstock(this StringBuilder sb, Highstock chart)
+        public static void AppendHighstock(this StringBuilder sb, HighStock chart)
         {
             foreach (KeyValuePair<string, string> jsVariable in chart.JsVariables)
                 sb.AppendLine("var {0} = {1};".FormatWith(jsVariable.Key, jsVariable.Value), 1);

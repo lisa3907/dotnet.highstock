@@ -7,7 +7,10 @@ using DotNet.HighStock.Options;
 
 namespace DotNet.HighStock
 {
-    public class Highstock : IHtmlString
+    /// <summary>
+    /// 
+    /// </summary>
+    public class HighStock : IHtmlString
     {
         internal string Name
         {
@@ -68,8 +71,8 @@ namespace DotNet.HighStock
         /// The chart object is the JavaScript object representing a single chart in the web page.
         /// </summary>
         /// <param name="name">The object name of the chart and related container</param>
-        /// <see cref="http://api.highcharts.com/highstock"/>
-        public Highstock(string name)
+        /// <see cref="http://api.highcharts.com/highstock"/> 
+        public HighStock(string name)
         {
             if (String.IsNullOrWhiteSpace(name))
                 throw new ArgumentException("The name of the chart must be specified.");
@@ -85,7 +88,7 @@ namespace DotNet.HighStock
         /// </summary>
         /// <param name="options"></param>
         /// <returns></returns>
-        public Highstock SetOptions(GlobalOptions options)
+        public HighStock SetOptions(GlobalOptions options)
         {
             Options = options;
             return this;
@@ -96,7 +99,7 @@ namespace DotNet.HighStock
         /// </summary>
         /// <param name="chart"></param>
         /// <returns></returns>
-        public Highstock InitChart(Chart chart)
+        public HighStock InitChart(Chart chart)
         {
             _Chart = chart;
             return this;
@@ -106,7 +109,7 @@ namespace DotNet.HighStock
         /// Highchart by default puts a credits label in the lower right corner of the chart. 
         /// This can be changed using these options.
         /// </summary>
-        public Highstock SetCredits(Credits credits)
+        public HighStock SetCredits(Credits credits)
         {
             _Credits = credits;
             return this;
@@ -117,7 +120,7 @@ namespace DotNet.HighStock
         /// </summary>
         /// <param name="exporting"></param>
         /// <returns></returns>
-        public Highstock SetExporting(Exporting exporting)
+        public HighStock SetExporting(Exporting exporting)
         {
             _Exporting = exporting;
             return this;
@@ -128,7 +131,7 @@ namespace DotNet.HighStock
         /// </summary>
         /// <param name="labels"></param>
         /// <returns></returns>
-        public Highstock SetLabels(Labels labels)
+        public HighStock SetLabels(Labels labels)
         {
             _Labels = labels;
             return this;
@@ -139,7 +142,7 @@ namespace DotNet.HighStock
         /// </summary>
         /// <param name="legend"></param>
         /// <returns></returns>
-        public Highstock SetLegend(Legend legend)
+        public HighStock SetLegend(Legend legend)
         {
             _Legend = legend;
             return this;
@@ -153,7 +156,7 @@ namespace DotNet.HighStock
         /// </summary>
         /// <param name="loading"></param>
         /// <returns></returns>
-        public Highstock SetLoading(Loading loading)
+        public HighStock SetLoading(Loading loading)
         {
             _Loading = loading;
             return this;
@@ -164,7 +167,7 @@ namespace DotNet.HighStock
         /// </summary>
         /// <param name="navigation"></param>
         /// <returns></returns>
-        public Highstock SetNavigation(Navigation navigation)
+        public HighStock SetNavigation(Navigation navigation)
         {
             _Navigation = navigation;
             return this;
@@ -176,7 +179,7 @@ namespace DotNet.HighStock
         /// </summary>
         /// <param name="navigator"></param>
         /// <returns></returns>
-        public Highstock SetNavigator(Navigator navigator)
+        public HighStock SetNavigator(Navigator navigator)
         {
             _Navigator = navigator;
             return this;
@@ -191,7 +194,7 @@ namespace DotNet.HighStock
         /// </summary>
         /// <param name="plotOptions"></param>
         /// <returns></returns>
-        public Highstock SetPlotOptions(PlotOptions plotOptions)
+        public HighStock SetPlotOptions(PlotOptions plotOptions)
         {
             _PlotOptions = plotOptions;
             return this;
@@ -204,7 +207,7 @@ namespace DotNet.HighStock
         /// </summary>
         /// <param name="rangeSelector"></param>
         /// <returns></returns>
-        public Highstock SetRangeSelector(RangeSelector rangeSelector)
+        public HighStock SetRangeSelector(RangeSelector rangeSelector)
         {
             _RangeSelector = rangeSelector;
             return this;
@@ -215,7 +218,7 @@ namespace DotNet.HighStock
         /// </summary>
         /// <param name="scrollbar"></param>
         /// <returns></returns>
-        public Highstock SetScrollbar(Scrollbar scrollbar)
+        public HighStock SetScrollbar(Scrollbar scrollbar)
         {
             _Scrollbar = scrollbar;
             return this;
@@ -228,7 +231,7 @@ namespace DotNet.HighStock
         /// </summary>
         /// <param name="series"></param>
         /// <returns></returns>
-        public Highstock SetSeries(Series series)
+        public HighStock SetSeries(Series series)
         {
             _Series = series;
             return this;
@@ -241,7 +244,7 @@ namespace DotNet.HighStock
         /// </summary>
         /// <param name="seriesArray">Array of series options.</param>
         /// <returns></returns>
-        public Highstock SetSeries(Series[] seriesArray)
+        public HighStock SetSeries(Series[] seriesArray)
         {
             _SeriesArray = seriesArray;
             return this;
@@ -252,7 +255,7 @@ namespace DotNet.HighStock
         /// </summary>
         /// <param name="subtitle">The subtitle options.</param>
         /// <returns></returns>
-        public Highstock SetSubtitle(Subtitle subtitle)
+        public HighStock SetSubtitle(Subtitle subtitle)
         {
             _Subtitle = subtitle;
             return this;
@@ -263,7 +266,7 @@ namespace DotNet.HighStock
         /// </summary>
         /// <param name="title">The title options.</param>
         /// <returns></returns>
-        public Highstock SetTitle(Title title)
+        public HighStock SetTitle(Title title)
         {
             _Title = title;
             return this;
@@ -274,7 +277,7 @@ namespace DotNet.HighStock
         /// </summary>
         /// <param name="tooltip">The tooltip options.</param>
         /// <returns></returns>
-        public Highstock SetTooltip(Tooltip tooltip)
+        public HighStock SetTooltip(Tooltip tooltip)
         {
             _Tooltip = tooltip;
             return this;
@@ -286,7 +289,7 @@ namespace DotNet.HighStock
         /// </summary>
         /// <param name="xAxis">The X axis options.</param>
         /// <returns></returns>
-        public Highstock SetXAxis(XAxis xAxis)
+        public HighStock SetXAxis(XAxis xAxis)
         {
             _XAxis = xAxis;
             return this;
@@ -298,7 +301,7 @@ namespace DotNet.HighStock
         /// </summary>
         /// <param name="xAxisArray">Array of X axis options.</param>
         /// <returns></returns>
-        public Highstock SetXAxis(XAxis[] xAxisArray)
+        public HighStock SetXAxis(XAxis[] xAxisArray)
         {
             _XAxisArray = xAxisArray;
             return this;
@@ -310,7 +313,7 @@ namespace DotNet.HighStock
         /// </summary>
         /// <param name="yAxis">The Y axis options.</param>
         /// <returns></returns>
-        public Highstock SetYAxis(YAxis yAxis)
+        public HighStock SetYAxis(YAxis yAxis)
         {
             _YAxis = yAxis;
             return this;
@@ -321,7 +324,7 @@ namespace DotNet.HighStock
         /// </summary>
         /// <param name="yAxisArray">Array Y axis options.</param>
         /// <returns></returns>
-        public Highstock SetYAxis(YAxis[] yAxisArray)
+        public HighStock SetYAxis(YAxis[] yAxisArray)
         {
             _YAxisArray = yAxisArray;
             return this;
@@ -334,7 +337,7 @@ namespace DotNet.HighStock
         /// <param name="name">The name of the variable.</param>
         /// <param name="value">The value of the variable.</param>
         /// <returns></returns>
-        public Highstock AddJavascripVariable(string name, string value)
+        public HighStock AddJavascripVariable(string name, string value)
         {
             JsVariables.Add(name, value);
             return this;
@@ -348,13 +351,13 @@ namespace DotNet.HighStock
         /// <param name="body">The body of the function.</param>
         /// <param name="variables">The variables of the function.</param>
         /// <returns></returns>
-        public Highstock AddJavascripFunction(string name, string body, params string[] variables)
+        public HighStock AddJavascripFunction(string name, string body, params string[] variables)
         {
             JsFunctions.Add("function {0}({1}){{".FormatWith(name, String.Join(", ", variables)), body);
             return this;
         }
 
-        public Highstock InFunction(string name)
+        public HighStock InFunction(string name)
         {
             FunctionName = name;
             return this;

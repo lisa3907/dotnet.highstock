@@ -3,19 +3,39 @@ using DotNet.HighStock.Enums;
 
 namespace DotNet.HighStock.Helpers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Animation
     {
+        /// <summary>
+        /// 
+        /// </summary>
         [Name("animation")]
         public bool? EnableAnimation { get; private set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [Name("animation")]
         public AnimationConfig AnimationConfig { get; private set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="animation"></param>
         public Animation(bool animation) { EnableAnimation = animation; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="animation"></param>
         public Animation(AnimationConfig animation) { AnimationConfig = animation; }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public class AnimationConfig
     {
         /// <summary>

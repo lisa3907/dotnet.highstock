@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
@@ -7,7 +8,6 @@ using System.Text;
 using DotNet.HighStock.Attributes;
 using DotNet.HighStock.Enums;
 using DotNet.HighStock.Helpers;
-using Windows.UI;
 
 namespace DotNet.HighStock
 {
@@ -100,7 +100,8 @@ namespace DotNet.HighStock
         {
             if (obj == null)
                 return NULL_STRING;
-            if (obj.GetType().IsPrimitive || obj is decimal || obj is String || obj is Color || obj is DateTime)
+
+            if (obj.GetType().GetTypeInfo().IsPrimitive || obj is decimal || obj is String || obj is Color || obj is DateTime)
             {
                 return GetValue(obj, obj.GetType(), GetJsonFormatter(null));
             }
@@ -121,9 +122,9 @@ namespace DotNet.HighStock
                     string propertyName = GetPropertyName(property);
 
                     string value;
-                    if (propertyType == typeof(Array) || propertyType.BaseType == typeof(Array) || propertyValue is Array)
+                    if (propertyType == typeof(Array) || propertyType.GetTypeInfo().BaseType == typeof(Array) || propertyValue is Array)
                         value = GetJsonArray(propertyValue as Array, formatter.UseCurlyBracketsForObject);
-                    else if (propertyType.IsGenericType && propertyType.GetGenericTypeDefinition() == typeof(Nullable<>))
+                    else if (propertyType.GetTypeInfo().IsGenericType && propertyType.GetGenericTypeDefinition() == typeof(Nullable<>))
                         value = GetValue(propertyValue, propertyType.GetGenericArguments()[0], formatter);
                     else
                         value = GetValue(propertyValue, propertyType, formatter);
@@ -159,9 +160,9 @@ namespace DotNet.HighStock
                 return GetColorString(formatter.JsonValueFormat, value);
             if (value is DateTime)
                 return GetJsonString(formatter.JsonValueFormat, JSON_DATE_FORMAT, ((DateTime)value).ToString(CultureInfo.InvariantCulture));
-            if (type.IsEnum)
+            if (type.GetTypeInfo().IsEnum)
                 return GetEnumString(formatter.JsonValueFormat, type, value);
-            if ((type.BaseType != null && type.BaseType == typeof(object)) || type.IsClass)
+            if ((type.GetTypeInfo().BaseType != null && type.GetTypeInfo().BaseType == typeof(object)) || type.GetTypeInfo().IsClass)
                 return GetJsonString(formatter.JsonValueFormat, JSON_DEFAULT_FORMAT, GetJsonObject(value, formatter.UseCurlyBracketsForObject));
 
             throw new NotImplementedException("Not implemented serialization for type: " + type.Name);
@@ -187,10 +188,10 @@ namespace DotNet.HighStock
         private static string GetColorString(string format, object obj)
         {
             Color color = (Color)obj;
-            if (color.IsNamedColor)
-                return color.IsKnownColor ? GetJsonString(format, JSON_STRING_FORMAT, color.Name.ToLower()) : GetJsonString(format, JSON_DEFAULT_FORMAT, color.Name);
-            if (color.A == 255)
-                return GetJsonString(format, JSON_STRING_FORMAT, ColorTranslator.ToHtml(color));
+            //if (color.IsNamedColor)
+            //    return color.IsKnownColor ? GetJsonString(format, JSON_STRING_FORMAT, color.Name.ToLower()) : GetJsonString(format, JSON_DEFAULT_FORMAT, color.Name);
+            //if (color.A == 255)
+            //    return GetJsonString(format, JSON_STRING_FORMAT, ColorTranslator.ToHtml(color));
             return GetJsonString(format, JSON_STRING_FORMAT, GetRgbColor(color));
         }
 
