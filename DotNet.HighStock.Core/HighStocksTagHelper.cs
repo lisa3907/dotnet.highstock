@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using DotNet.HighStock.Enums;
-using DotNet.HighStock.Options;
+﻿using System.Text;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
 namespace DotNet.HighStock
@@ -14,66 +10,6 @@ namespace DotNet.HighStock
         /// </summary>
         [HtmlAttributeName("title")]
         public string Title { get; set; }
-
-        /// <summary>
-        /// 차트 종류
-        /// </summary>
-        [HtmlAttributeName("type")]
-        public ChartTypes Type { get; set; }
-
-        /// <summary>
-        /// 차트 레벨 2 헤드 라인
-        /// </summary>
-        [HtmlAttributeName("subtitle")]
-        public string SubTitle { get; set; }
-
-        /// <summary>
-        /// 데이터 개체
-        /// </summary>
-        [HtmlAttributeName("series")]
-        public Series Series { get; set; }
-
-        /// <summary>
-        /// 일부 추가 옵션
-        /// </summary>
-        [HtmlAttributeName("plotoptions")]
-        public string PlotOptions { get; set; }
-
-        /// <summary>
-        /// X 축 선택
-        /// </summary>
-        [HtmlAttributeName("xAxis")]
-        public List<XAxis> XAxis { get; set; }
-
-        /// <summary>
-        /// Y 축 선택
-        /// </summary>
-        [HtmlAttributeName("yAxis")]
-        public List<YAxis> YAxis { get; set; }
-
-        /// <summary>
-        /// 툴팁 형식
-        /// </summary>
-        [HtmlAttributeName("Tooltip")]
-        public string Tooltip { get; set; }
-
-        /// <summary>
-        /// 컨테이너 ID
-        /// </summary>
-        [HtmlAttributeName("id")]
-        public string Id { get; set; }
-
-        /// <summary>
-        /// 범례
-        /// </summary>
-        [HtmlAttributeName("legend")]
-        public bool Legend { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [HtmlAttributeName("serieslist")]
-        public List<Series> SeriesList { get; set; }
 
         /// <summary>
         /// 
@@ -97,8 +33,8 @@ namespace DotNet.HighStock
         {
             if (Stock != null)
             {
-                output.Attributes.SetAttribute("title", "DotNet.HighStock.Core");
-                output.Attributes.SetAttribute("id", Id);
+                output.Attributes.SetAttribute("title", Title);
+                output.Attributes.SetAttribute("id", Stock.ContainerName);
 
                 var _style = new StringBuilder("margin:0px auto;min-width:400px;");
                 if (Width > 0)
@@ -108,7 +44,7 @@ namespace DotNet.HighStock
                 output.Attributes.SetAttribute("style", _style.ToString());
                 output.TagName = "div";
 
-                output.PostElement.AppendHtml(Stock.ToHtmlString());
+                output.PostElement.AppendHtml(Stock.ChartScriptHtmlString());
             }
         }
     }
