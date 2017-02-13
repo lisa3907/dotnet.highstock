@@ -1,7 +1,15 @@
 {
   "title": "DotNet.HighStck.Core",
-  "copyright": "Copyright © OdinSoftware Co., Ltd. 2017",
   "description": "Highstock for .NET C# Programming",
+  "copyright": "Copyright © OdinSoftware Co., Ltd. 2017",
+  "authors": [ "SEONGAHN LEE" ],
+  "packOptions": {
+    "iconUrl": "https://github.com/lisa3907/dotnet.highstock/blob/master/DotNet.HighStock.Core/highstock.ico?raw=true",
+    "projectUrl": "https://github.com/lisa3907/dotnet.highstock",
+    "summary": "",
+    "tags": [ "highstock", "highchart", "library" ],
+    "releaseNotes": ""
+  },
   "version": "1.1.3-*",
 
   "dependencies": {
