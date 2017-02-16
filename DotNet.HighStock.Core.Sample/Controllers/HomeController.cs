@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BitCoin.Database.Models.Types;
 using DotNet.HighStock;
 using DotNet.HighStock.Enums;
 using DotNet.HighStock.Options;
@@ -14,7 +13,6 @@ namespace BitCoin.AspNet.Controllers
 {
     public class HomeController : Controller
     {
-        private static CLogger __clogger = new CLogger();
         private static CConfig __cconfig = new CConfig();
 
         private CHttpClient __web_client = null;

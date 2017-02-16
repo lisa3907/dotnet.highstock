@@ -17,13 +17,12 @@
     "Microsoft.Extensions.Logging": "1.1.0",
     "Microsoft.Extensions.Logging.Debug": "1.1.0",
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.1.0",
-    "BitCoin.Database": "1.0.0-*",
-    "DotNet.HighStock.Core": "1.1.3",
     "Microsoft.NETCore.App": {
       "version": "1.1.0",
       "type": "platform"
     },
-    "Microsoft.Extensions.Configuration.UserSecrets": "1.1.0"
+    "Microsoft.Extensions.Configuration.UserSecrets": "1.1.0",
+    "DotNet.HighStock.Core": "1.1.3-*"
   },
 
   "tools": {
