@@ -23,9 +23,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Html.Abstractions" Version="1.1.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="1.1.0" />
-    <PackageReference Include="OdinSdk.BaseLib" Version="1.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Html.Abstractions" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="1.1.1" />
+    <PackageReference Include="OdinSdk.BaseLib.Core" Version="1.0.1" />
     <PackageReference Include="System.Drawing-dotnet-core" Version="1.0.2" />
     <PackageReference Include="System.Reflection.TypeExtensions" Version="4.3.0" />
   </ItemGroup>

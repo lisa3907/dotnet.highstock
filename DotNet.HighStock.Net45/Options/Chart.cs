@@ -279,9 +279,7 @@ namespace DotNet.HighStock.Options
             set;
         }
 
-        /// <summary>
-        /// The HTML element where the chart will be rendered. If it is a string, the element by that id is used. The HTML element can also be passed by direct reference.
-        /// </summary>
+        // The HTML element where the chart will be rendered. If it is a string, the element by that id is used. The HTML element can also be passed by direct reference.
         // TODO: renderTo for object is not implemented. Just for string when the name of the chart is specified.
 
         /// <summary>
