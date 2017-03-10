@@ -1,15 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <Title>Highstock for Dotnet Core</Title>
     <Description>Highstock for .NET C# Programming</Description>
     <Copyright>Copyright © OdinSoftware Co., Ltd. 2017</Copyright>
     <AssemblyTitle>DotNet.HighStck.Core</AssemblyTitle>
-    <VersionPrefix>1.1.3</VersionPrefix>
+    <VersionPrefix>1.1.4</VersionPrefix>
     <Authors>SEONGAHN LEE</Authors>
     <TargetFramework>netstandard1.6</TargetFramework>
     <AssemblyName>DotNet.HighStock.Core</AssemblyName>
     <PackageId>DotNet.HighStock.Core</PackageId>
-    <PackageTags>highstock;highchart;library</PackageTags>
+    <PackageTags>highstock;highchart</PackageTags>
     <PackageIconUrl>https://github.com/lisa3907/dotnet.highstock/blob/master/DotNet.HighStock.Core/highstock.ico?raw=true</PackageIconUrl>
     <PackageProjectUrl>https://github.com/lisa3907/dotnet.highstock</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/lisa3907/dotnet.highstock/blob/master/LICENSE</PackageLicenseUrl>
@@ -19,7 +20,8 @@
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>1.1.3</Version>
+    <Version>1.1.4</Version>
+    <PackageReleaseNotes>OdinSdk.BaseLib has been replaced by OdinSdk.BaseLib.Core.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
