@@ -9,13 +9,16 @@ We created DotNet.HighStock using open-source dotnet.highcharts.
 This project started in 2014/12.
 I plan to update it continuously.
 
-sample site) http://bpi-chart.bgc-e.com
+[sample chart site](http://chart.bgc-e.com)
 
 Donate:
 ======
 
 BTC: 1FP3qopPnizeXafNkiXs1dTF85dkNP8fh4
 
+
+Contact
+=======
 Home-Page: http://www.odinsoftware.co.kr
 
 E-MAIL: help@odinsoftware.co.kr
