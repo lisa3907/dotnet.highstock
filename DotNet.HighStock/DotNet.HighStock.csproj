@@ -20,8 +20,8 @@
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>1.1.4</Version>
-    <PackageReleaseNotes>OdinSdk.BaseLib has been replaced by OdinSdk.BaseLib.Core.</PackageReleaseNotes>
+    <Version>1.1.5</Version>
+    <PackageReleaseNotes>upgrade .net core 2.0 &amp; net47</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
