@@ -6,10 +6,7 @@ using DotNet.HighStock.Helpers;
 
 namespace DotNet.HighStock.Options
 {
-	/// <summary>
-	/// Options for the waterfall series type.
-	/// </summary>
-	public class PlotOptionsWaterfall
+	public class PlotOptionsBar
 	{
 		/// <summary>
 		/// Allow this series' points to be selected by clicking on the markers, bars or pie slices.
@@ -25,8 +22,8 @@ namespace DotNet.HighStock.Options
 		public Animation Animation { get; set; }
 
 		/// <summary>
-		/// The color of the border of each waterfall column.
-		/// Default: #333333
+		/// The color of the border surrounding each column or bar.
+		/// Default: #FFFFFF
 		/// </summary>
 		public Color? BorderColor { get; set; }
 
@@ -59,17 +56,17 @@ namespace DotNet.HighStock.Options
 		public Color[] Colors { get; set; }
 
 		/// <summary>
+		/// When the series contains less points than the crop threshold, all points are drawn,  event if the points fall outside the visible plot area at the current zoom. The advantage of drawing all points (including markers and columns), is that animation is performed on updates. On the other hand, when the series contains more points than the crop threshold, the series data is cropped to only contain points that fall within the plot area. The advantage of cropping away invisible points is to increase performance on large series.  .
+		/// Default: 50
+		/// </summary>
+		public Number? CropThreshold { get; set; }
+
+		/// <summary>
 		/// You can set the cursor to 'pointer' if you have click events attached to  the series, to signal to the user that the points and lines can be clicked.
 		/// </summary>
 		public Cursors? Cursor { get; set; }
 
-		/// <summary>
-		/// A name for the dash style to use for the line connecting the columns of the waterfall series. Possible values:    <ul>    <li>Solid</li>    <li>ShortDash</li>    <li>ShortDot</li>    <li>ShortDashDot</li>    <li>ShortDashDotDot</li>    <li>Dot</li>    <li>Dash</li>    <li>LongDash</li>    <li>DashDot</li>    <li>LongDashDot</li>    <li>LongDashDotDot</li>    </ul>.
-		/// Default: Dot
-		/// </summary>
-		public DashStyles? DashStyle { get; set; }
-
-		public PlotOptionsWaterfallDataLabels DataLabels { get; set; }
+		public PlotOptionsBarDataLabels DataLabels { get; set; }
 
 		/// <summary>
 		/// Depth of the columns in a 3D column chart. Requires <code>highstock-3d.js</code>.
@@ -94,7 +91,7 @@ namespace DotNet.HighStock.Options
 		/// </summary>
 		public bool? EnableMouseTracking { get; set; }
 
-		public PlotOptionsWaterfallEvents Events { get; set; }
+		public PlotOptionsBarEvents Events { get; set; }
 
 		/// <summary>
 		/// Padding between each value groups, in x axis units.
@@ -115,12 +112,6 @@ namespace DotNet.HighStock.Options
 		public bool? Grouping { get; set; }
 
 		/// <summary>
-		/// The color of the line that connects columns in a waterfall series.
-		/// Default: #333333
-		/// </summary>
-		public Color? LineColor { get; set; }
-
-		/// <summary>
 		/// The <a href='#series.id'>id</a> of another series to link to. Additionally, the value can be ':previous' to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.
 		/// </summary>
 		public string LinkedTo { get; set; }
@@ -132,9 +123,15 @@ namespace DotNet.HighStock.Options
 		public Number? MinPointLength { get; set; }
 
 		/// <summary>
+		/// The color for the parts of the graph or points that are below the <a href='#plotOptions.series.threshold'>threshold</a>.
+		/// Default: null
+		/// </summary>
+		public Color? NegativeColor { get; set; }
+
+		/// <summary>
 		/// Properties for each single point
 		/// </summary>
-		public PlotOptionsWaterfallPoint Point { get; set; }
+		public PlotOptionsBarPoint Point { get; set; }
 
 		/// <summary>
 		/// <p>If no x values are given for the points in a series, pointInterval defines the interval of the x values. For example, if a series contains one value every decade starting from year 0, set pointInterval to 10.</p>
@@ -148,10 +145,11 @@ namespace DotNet.HighStock.Options
 		/// </summary>
 		public Number? PointPadding { get; set; }
 
-		/// <summary>
-		/// <p>Possible values: null, 'on', 'between'.</p><p>In a column chart, when pointPlacement is 'on', the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is 'between', the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart.</p><p>Since Highstock 3.0.2, the point placement can also be numeric, where 0 is on the axis value, -0.5 is between this value and the previous, and 0.5 is between this value and the next. Unlike the textual options, numeric point placement options won't affect axis padding.</p><p>Defaults to <code>null</code> in cartesian charts, <code>'between'</code> in polar charts.
-		/// </summary>
-		[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
+        /// <summary>
+        /// <p>Possible values: null, 'on', 'between'.</p><p>In a column chart, when pointPlacement is 'on', the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is 'between', the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart.</p><p>Since Highstock 3.0.2, the point placement can also be numeric, where 0 is on the axis value, -0.5 is between this value and the previous, and 0.5 is between this value and the next. Unlike the textual options, numeric point placement options won't affect axis padding.</p><p>Defaults to <code>null</code> in cartesian charts, <code>'between'</code> in polar charts.
+        /// </p>
+        /// </summary>
+        [JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
 		public PointPlacement PointPlacement { get; set; }
 
 		/// <summary>
@@ -196,9 +194,14 @@ namespace DotNet.HighStock.Options
 		public bool? ShowInLegend { get; set; }
 
 		/// <summary>
+		/// Whether to stack the values of each series on top of each other. Possible values are null to disable, 'normal' to stack by value or 'percent'.
+		/// </summary>
+		public Stackings? Stacking { get; set; }
+
+		/// <summary>
 		/// A wrapper object for all the series options in specific states.
 		/// </summary>
-		public PlotOptionsWaterfallStates States { get; set; }
+		public PlotOptionsBarStates States { get; set; }
 
 		/// <summary>
 		/// Sticky tracking of mouse events. When true, the <code>mouseOut</code> event on a series isn't triggered until the mouse moves over another series, or out of the plot area. When false, the <code>mouseOut</code> event on a series is triggered when the mouse leaves the area around the series' graph or markers. This also implies the tooltip. When <code>stickyTracking</code> is false and <code>tooltip.shared</code> is false, the  tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc.
@@ -215,12 +218,13 @@ namespace DotNet.HighStock.Options
 		/// <summary>
 		/// A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href='#tooltip'>tooltip</a>, but only the following properties can be defined on a series level.
 		/// </summary>
-		public PlotOptionsWaterfallTooltip Tooltip { get; set; }
+		public PlotOptionsBarTooltip Tooltip { get; set; }
 
 		/// <summary>
-		/// The color used specifically for positive point columns. When not specified, the general series color is used.
+		/// When a series contains a data array that is longer than this, only one dimensional arrays of numbers, or two dimensional arrays with x and y values are allowed. Also, only the first point is tested, and the rest are assumed to be the same format. This saves expensive data checking and indexing in long series. Set it to <code>0</code> disable.
+		/// Default: 1000
 		/// </summary>
-		public Color? UpColor { get; set; }
+		public Number? TurboThreshold { get; set; }
 
 		/// <summary>
 		/// Set the initial visibility of the series.

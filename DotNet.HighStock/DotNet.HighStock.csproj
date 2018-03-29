@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Title>Highstock for Dotnet Core</Title>
     <Description>Highstock for .NET C# Programming</Description>
-    <Copyright>Copyright © OdinSoftware Co., Ltd. 2017</Copyright>
+    <Copyright>Copyright ⓒ OdinSoftware Co., Ltd. 2017</Copyright>
     <AssemblyTitle>DotNet.HighStck.Core</AssemblyTitle>
     <VersionPrefix>1.1.4</VersionPrefix>
     <Authors>SEONGAHN LEE</Authors>
-    <TargetFramework>netstandard1.6</TargetFramework>
+    <TargetFrameworks>net47;netcoreapp2.0</TargetFrameworks>
     <AssemblyName>DotNet.HighStock.Core</AssemblyName>
     <PackageId>DotNet.HighStock.Core</PackageId>
     <PackageTags>highstock;highchart</PackageTags>
@@ -25,11 +25,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Html.Abstractions" Version="1.1.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="1.1.1" />
-    <PackageReference Include="OdinSdk.BaseLib.Core" Version="1.0.1" />
-    <PackageReference Include="System.Drawing-dotnet-core" Version="1.0.2" />
-    <PackageReference Include="System.Reflection.TypeExtensions" Version="4.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Html.Abstractions" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="2.0.2" />
+    <PackageReference Include="OdinSdk.BaseLib.Core" Version="2.0.1" />
+    <PackageReference Include="System.Reflection.TypeExtensions" Version="4.4.0" />
   </ItemGroup>
 
 </Project>

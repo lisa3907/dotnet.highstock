@@ -6,10 +6,7 @@ using DotNet.HighStock.Helpers;
 
 namespace DotNet.HighStock.Options
 {
-	/// <summary>
-	/// The area spline range is a cartesian series type with higher and lower Y values along an X axis. Requires <code>highstock-more.js</code>.
-	/// </summary>
-	public class PlotOptionsAreasplinerange
+	public class PlotOptionsArea
 	{
 		/// <summary>
 		/// Allow this series' points to be selected by clicking on the markers, bars or pie slices.
@@ -28,6 +25,12 @@ namespace DotNet.HighStock.Options
 		/// The main color or the series. In line type series it applies to the line and the point markers unless otherwise specified. In bar type series it applies to the bars unless a color is specified per point. The default value is pulled from the  <code>options.colors</code> array.
 		/// </summary>
 		public Color? Color { get; set; }
+
+		/// <summary>
+		/// Polar charts only. Whether to connect the ends of a line series plot across the extremes.
+		/// Default: true
+		/// </summary>
+		public bool? ConnectEnds { get; set; }
 
 		/// <summary>
 		/// Whether to connect a graph line across null points.
@@ -52,10 +55,7 @@ namespace DotNet.HighStock.Options
 		/// </summary>
 		public DashStyles? DashStyle { get; set; }
 
-		/// <summary>
-		/// Extended data labels for range series types. Range series  data labels have no <code>x</code> and <code>y</code> options. Instead, they have <code>xLow</code>, <code>xHigh</code>, <code>yLow</code> and <code>yHigh</code> options to allow the higher and lower data label sets individually. 
-		/// </summary>
-		public PlotOptionsAreasplinerangeDataLabels DataLabels { get; set; }
+		public PlotOptionsAreaDataLabels DataLabels { get; set; }
 
 		/// <summary>
 		/// Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
@@ -63,12 +63,13 @@ namespace DotNet.HighStock.Options
 		/// </summary>
 		public bool? EnableMouseTracking { get; set; }
 
-		public PlotOptionsAreasplinerangeEvents Events { get; set; }
+		public PlotOptionsAreaEvents Events { get; set; }
 
 		/// <summary>
 		/// Fill color or gradient for the area. When <code>null</code>, the series' <code>color</code>  is  used with the series' <code>fillOpacity</code>.
 		/// </summary>
-		public Color? FillColor { get; set; }
+		[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
+		public BackColorOrGradient FillColor { get; set; }
 
 		/// <summary>
 		/// Fill opacity for the area.
@@ -82,8 +83,8 @@ namespace DotNet.HighStock.Options
 		public Color? LineColor { get; set; }
 
 		/// <summary>
-		/// Pixel width of the arearange graph line.
-		/// Default: 1
+		/// Pixel with of the graph line.
+		/// Default: 2
 		/// </summary>
 		public Number? LineWidth { get; set; }
 
@@ -91,6 +92,8 @@ namespace DotNet.HighStock.Options
 		/// The <a href='#series.id'>id</a> of another series to link to. Additionally, the value can be ':previous' to link to the previous series. When two series are linked, only the first one appears in the legend. Toggling the visibility of this also toggles the linked series.
 		/// </summary>
 		public string LinkedTo { get; set; }
+
+		public PlotOptionsAreaMarker Marker { get; set; }
 
 		/// <summary>
 		/// The color for the parts of the graph or points that are below the <a href='#plotOptions.series.threshold'>threshold</a>.
@@ -106,7 +109,7 @@ namespace DotNet.HighStock.Options
 		/// <summary>
 		/// Properties for each single point
 		/// </summary>
-		public PlotOptionsAreasplinerangePoint Point { get; set; }
+		public PlotOptionsAreaPoint Point { get; set; }
 
 		/// <summary>
 		/// <p>If no x values are given for the points in a series, pointInterval defines the interval of the x values. For example, if a series contains one value every decade starting from year 0, set pointInterval to 10.</p>
@@ -115,7 +118,9 @@ namespace DotNet.HighStock.Options
 		public Number? PointInterval { get; set; }
 
 		/// <summary>
-		/// <p>Possible values: null, 'on', 'between'.</p><p>In a column chart, when pointPlacement is 'on', the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is 'between', the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart.</p><p>Since Highstock 3.0.2, the point placement can also be numeric, where 0 is on the axis value, -0.5 is between this value and the previous, and 0.5 is between this value and the next. Unlike the textual options, numeric point placement options won't affect axis padding.</p><p>Defaults to <code>null</code> in cartesian charts, <code>'between'</code> in polar charts.
+		/// <p>Possible values: null, 'on', 'between'.</p>
+        /// <p>In a column chart, when pointPlacement is 'on', the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is 'between', the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart.</p><p>Since Highstock 3.0.2, the point placement can also be numeric, where 0 is on the axis value, -0.5 is between this value and the previous, and 0.5 is between this value and the next. Unlike the textual options, numeric point placement options won't affect axis padding.</p>
+        /// <p>Defaults to <code>null</code> in cartesian charts, <code>'between'</code> in polar charts.</p>
 		/// </summary>
 		[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
 		public PointPlacement PointPlacement { get; set; }
@@ -134,7 +139,7 @@ namespace DotNet.HighStock.Options
 		public bool? Selected { get; set; }
 
 		/// <summary>
-		/// Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>. 
+		/// Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>.
 		/// Default: false
 		/// </summary>
 		public bool? Shadow { get; set; }
@@ -159,7 +164,7 @@ namespace DotNet.HighStock.Options
 		/// <summary>
 		/// A wrapper object for all the series options in specific states.
 		/// </summary>
-		public PlotOptionsAreasplinerangeStates States { get; set; }
+		public PlotOptionsAreaStates States { get; set; }
 
 		/// <summary>
 		/// Sticky tracking of mouse events. When true, the <code>mouseOut</code> event on a series isn't triggered until the mouse moves over another series, or out of the plot area. When false, the <code>mouseOut</code> event on a series is triggered when the mouse leaves the area around the series' graph or markers. This also implies the tooltip. When <code>stickyTracking</code> is false and <code>tooltip.shared</code> is false, the  tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc.
@@ -168,13 +173,19 @@ namespace DotNet.HighStock.Options
 		public bool? StickyTracking { get; set; }
 
 		/// <summary>
+		/// The Y axis value to serve as the base for the area, for distinguishing between values above and below a threshold. If <code>null</code>, the area behaves like a line series with fill between the graph and the Y axis minimum.
+		/// Default: 0
+		/// </summary>
+		public Number? Threshold { get; set; }
+
+		/// <summary>
 		/// A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href='#tooltip'>tooltip</a>, but only the following properties can be defined on a series level.
 		/// </summary>
-		public PlotOptionsAreasplinerangeTooltip Tooltip { get; set; }
+		public PlotOptionsAreaTooltip Tooltip { get; set; }
 
 		/// <summary>
 		/// Whether the whole area or just the line should respond to mouseover tooltips and other mouse or touch events.
-		/// Default: true
+		/// Default: false
 		/// </summary>
 		public bool? TrackByArea { get; set; }
 

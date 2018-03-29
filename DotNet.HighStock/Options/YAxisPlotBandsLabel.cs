@@ -9,16 +9,17 @@ namespace DotNet.HighStock.Options
 	/// <summary>
 	/// Text labels for the plot bands
 	/// </summary>
-	public class YAxisPlotLinesLabel
+	public class YAxisPlotBandsLabel
 	{
 		/// <summary>
 		/// Horizontal alignment of the label. Can be one of 'left', 'center' or 'right'.
-		/// Default: left
+		/// Default: center
 		/// </summary>
 		public HorizontalAligns? Align { get; set; }
 
 		/// <summary>
-		/// Rotation of the text label in degrees. Defaults to 0 for horizontal plot lines and 90 for vertical lines.
+		/// Rotation of the text label in degrees .
+		/// Default: 0
 		/// </summary>
 		public Number? Rotation { get; set; }
 
@@ -29,7 +30,7 @@ namespace DotNet.HighStock.Options
 		public string Style { get; set; }
 
 		/// <summary>
-		/// The text itself. A subset of HTML is supported.
+		/// The string text itself. A subset of HTML is supported.
 		/// </summary>
 		public string Text { get; set; }
 
@@ -39,8 +40,9 @@ namespace DotNet.HighStock.Options
 		public HorizontalAligns? TextAlign { get; set; }
 
 		/// <summary>
-		/// <p>Whether to <a href='http://docs.highstock.com/#formatting$html'>use HTML</a> to render the labels.
+		/// <p>Whether to <a href='http://www.highstock.com/docs/chart-concepts/labels-and-string-formatting#html'>use HTML</a> to render the labels.
 		/// Default: false
+        /// </p>
 		/// </summary>
 		public bool? UseHTML { get; set; }
 

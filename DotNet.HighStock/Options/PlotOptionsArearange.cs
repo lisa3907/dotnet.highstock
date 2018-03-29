@@ -7,9 +7,9 @@ using DotNet.HighStock.Helpers;
 namespace DotNet.HighStock.Options
 {
 	/// <summary>
-	/// A box plot is a convenient way of depicting groups of data through their five-number summaries: the smallest observation (sample minimum), lower quartile (Q1), median (Q2), upper quartile (Q3), and largest observation (sample maximum). 
+	/// The area range is a cartesian series type with higher and lower Y values along an X axis. Requires <code>highstock-more.js</code>.
 	/// </summary>
-	public class PlotOptionsBoxplot
+	public class PlotOptionsArearange
 	{
 		/// <summary>
 		/// Allow this series' points to be selected by clicking on the markers, bars or pie slices.
@@ -18,20 +18,28 @@ namespace DotNet.HighStock.Options
 		public bool? AllowPointSelect { get; set; }
 
 		/// <summary>
+		/// <p>Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see <a href='#chart.animation'>chart.animation</a> and the animation parameter under the API methods.The following properties are supported:</p><dl>  <dt>duration</dt>  <dd>The duration of the animation in milliseconds.</dd><dt>easing</dt><dd>When using jQuery as the general framework, the easing can be set to <code>linear</code> or<code>swing</code>. More easing functions are available with the use of jQuery plug-ins, most notablythe jQuery UI suite. See <a href='http://api.jquery.com/animate/'>the jQuery docs</a>. When using MooTools as the general framework, use the property name <code>transition</code> instead of <code>easing</code>.</dd></dl><p>Due to poor performance, animation is disabled in old IE browsers for column charts and polar charts.</p>
+		/// Default: true
+		/// </summary>
+		[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
+		public Animation Animation { get; set; }
+
+		/// <summary>
 		/// The main color or the series. In line type series it applies to the line and the point markers unless otherwise specified. In bar type series it applies to the bars unless a color is specified per point. The default value is pulled from the  <code>options.colors</code> array.
 		/// </summary>
 		public Color? Color { get; set; }
 
 		/// <summary>
-		/// When using automatic point colors pulled from the <code>options.colors</code> collection, this option determines whether the chart should receive  one color per series or one color per point.
+		/// Whether to connect a graph line across null points.
 		/// Default: false
 		/// </summary>
-		public bool? ColorByPoint { get; set; }
+		public bool? ConnectNulls { get; set; }
 
 		/// <summary>
-		/// A series specific or series type specific color set to apply instead of the global <a href='#colors'>colors</a> when <a href='#plotOptions.column.colorByPoint'>colorByPoint</a> is true.
+		/// When the series contains less points than the crop threshold, all points are drawn,  event if the points fall outside the visible plot area at the current zoom. The advantage of drawing all points (including markers and columns), is that animation is performed on updates. On the other hand, when the series contains more points than the crop threshold, the series data is cropped to only contain points that fall within the plot area. The advantage of cropping away invisible points is to increase performance on large series.  .
+		/// Default: 300
 		/// </summary>
-		public Color[] Colors { get; set; }
+		public Number? CropThreshold { get; set; }
 
 		/// <summary>
 		/// You can set the cursor to 'pointer' if you have click events attached to  the series, to signal to the user that the points and lines can be clicked.
@@ -39,21 +47,15 @@ namespace DotNet.HighStock.Options
 		public Cursors? Cursor { get; set; }
 
 		/// <summary>
-		/// Depth of the columns in a 3D column chart. Requires <code>highstock-3d.js</code>.
-		/// Default: 25
+		/// A name for the dash style to use for the graph. Applies only to series type having a graph, like <code>line</code>, <code>spline</code>, <code>area</code> and <code>scatter</code> in  case it has a <code>lineWidth</code>. The value for the <code>dashStyle</code> include:    <ul>    <li>Solid</li>    <li>ShortDash</li>    <li>ShortDot</li>    <li>ShortDashDot</li>    <li>ShortDashDotDot</li>    <li>Dot</li>    <li>Dash</li>    <li>LongDash</li>    <li>DashDot</li>    <li>LongDashDot</li>    <li>LongDashDotDot</li>    </ul>
+		/// Default: Solid
 		/// </summary>
-		public Number? Depth { get; set; }
+		public DashStyles? DashStyle { get; set; }
 
 		/// <summary>
-		/// 3D columns only. The color of the edges. Similar to <code>borderColor</code>, except it defaults to the same color as the column.
+		/// Extended data labels for range series types. Range series  data labels have no <code>x</code> and <code>y</code> options. Instead, they have <code>xLow</code>, <code>xHigh</code>, <code>yLow</code> and <code>yHigh</code> options to allow the higher and lower data label sets individually. 
 		/// </summary>
-		public Color? EdgeColor { get; set; }
-
-		/// <summary>
-		/// 3D columns only. The width of the colored edges.
-		/// Default: 1
-		/// </summary>
-		public Number? EdgeWidth { get; set; }
+		public PlotOptionsArearangeDataLabels DataLabels { get; set; }
 
 		/// <summary>
 		/// Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
@@ -61,34 +63,26 @@ namespace DotNet.HighStock.Options
 		/// </summary>
 		public bool? EnableMouseTracking { get; set; }
 
-		public PlotOptionsBoxplotEvents Events { get; set; }
+		public PlotOptionsArearangeEvents Events { get; set; }
 
 		/// <summary>
-		/// The fill color of the box.
-		/// Default: #FFFFFF
+		/// Fill color or gradient for the area. When <code>null</code>, the series' <code>color</code>  is  used with the series' <code>fillOpacity</code>.
 		/// </summary>
 		public Color? FillColor { get; set; }
 
 		/// <summary>
-		/// Padding between each value groups, in x axis units.
-		/// Default: 0.2
+		/// Fill opacity for the area.
+		/// Default: 0.75
 		/// </summary>
-		public Number? GroupPadding { get; set; }
+		public Number? FillOpacity { get; set; }
 
 		/// <summary>
-		/// The spacing between columns on the Z Axis in a 3D chart. Requires <code>highstock-3d.js</code>.
-		/// Default: 1
+		/// A separate color for the graph line. By default the line takes the <code>color</code> of the series, but the lineColor setting allows setting a separate color for the line without altering the <code>fillColor</code>.
 		/// </summary>
-		public Number? GroupZPadding { get; set; }
+		public Color? LineColor { get; set; }
 
 		/// <summary>
-		/// Whether to group non-stacked columns or to let them render independent of each other. Non-grouped columns will be laid out individually and overlap each other.
-		/// Default: true
-		/// </summary>
-		public bool? Grouping { get; set; }
-
-		/// <summary>
-		/// The width of the line surrounding the box. If any of <a href='#plotOptions.boxplot.stemWidth'>stemWidth</a>, <a href='#plotOptions.boxplot.medianWidth'>medianWidth</a> or <a href='#plotOptions.boxplot.whiskerWidth'>whiskerWidth</a> are <code>null</code>, the lineWidth also applies to these lines.
+		/// Pixel width of the arearange graph line.
 		/// Default: 1
 		/// </summary>
 		public Number? LineWidth { get; set; }
@@ -99,27 +93,20 @@ namespace DotNet.HighStock.Options
 		public string LinkedTo { get; set; }
 
 		/// <summary>
-		/// The color of the median line. If <code>null</code>, the general series color applies.
-		/// Default: null
-		/// </summary>
-		public Color? MedianColor { get; set; }
-
-		/// <summary>
-		/// The pixel width of the median line. If <code>null</code>, the <a href='#plotOptions.boxplot.lineWidth'>lineWidth</a> is used.
-		/// Default: 2
-		/// </summary>
-		public Number? MedianWidth { get; set; }
-
-		/// <summary>
 		/// The color for the parts of the graph or points that are below the <a href='#plotOptions.series.threshold'>threshold</a>.
 		/// Default: null
 		/// </summary>
 		public Color? NegativeColor { get; set; }
 
 		/// <summary>
+		/// A separate color for the negative part of the area.
+		/// </summary>
+		public Color? NegativeFillColor { get; set; }
+
+		/// <summary>
 		/// Properties for each single point
 		/// </summary>
-		public PlotOptionsBoxplotPoint Point { get; set; }
+		public PlotOptionsArearangePoint Point { get; set; }
 
 		/// <summary>
 		/// <p>If no x values are given for the points in a series, pointInterval defines the interval of the x values. For example, if a series contains one value every decade starting from year 0, set pointInterval to 10.</p>
@@ -128,21 +115,11 @@ namespace DotNet.HighStock.Options
 		public Number? PointInterval { get; set; }
 
 		/// <summary>
-		/// Padding between each column or bar, in x axis units.
-		/// Default: 0.1
-		/// </summary>
-		public Number? PointPadding { get; set; }
-
-		/// <summary>
 		/// <p>Possible values: null, 'on', 'between'.</p><p>In a column chart, when pointPlacement is 'on', the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is 'between', the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart.</p><p>Since Highstock 3.0.2, the point placement can also be numeric, where 0 is on the axis value, -0.5 is between this value and the previous, and 0.5 is between this value and the next. Unlike the textual options, numeric point placement options won't affect axis padding.</p><p>Defaults to <code>null</code> in cartesian charts, <code>'between'</code> in polar charts.
-		/// </summary>
+		/// </p>
+        /// </summary>
 		[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
 		public PointPlacement PointPlacement { get; set; }
-
-		/// <summary>
-		/// The X axis range that each point is valid for. This determines the width of the column. On a categorized axis, the range will be 1 by default (one category unit). On linear and datetime axes, the range will be computed as the distance between the two closest data points.
-		/// </summary>
-		public Number? PointRange { get; set; }
 
 		/// <summary>
 		/// If no x values are given for the points in a series, pointStart defines on what value to start. For example, if a series contains one yearly value starting from 1945, set pointStart to 1945.
@@ -152,15 +129,16 @@ namespace DotNet.HighStock.Options
 		public PointStart PointStart { get; set; }
 
 		/// <summary>
-		/// A pixel value specifying a fixed width for each column or bar. When <code>null</code>, the width is calculated from the <code>pointPadding</code> and <code>groupPadding</code>.
-		/// </summary>
-		public Number? PointWidth { get; set; }
-
-		/// <summary>
 		/// Whether to select the series initially. If <code>showCheckbox</code> is true, the checkbox next to the series name will be checked for a selected series.
 		/// Default: false
 		/// </summary>
 		public bool? Selected { get; set; }
+
+		/// <summary>
+		/// Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>. 
+		/// Default: false
+		/// </summary>
+		public bool? Shadow { get; set; }
 
 		/// <summary>
 		/// If true, a checkbox is displayed next to the legend item to allow selecting the series. The state of the checkbox is determined by the <code>selected</code> option.
@@ -175,27 +153,14 @@ namespace DotNet.HighStock.Options
 		public bool? ShowInLegend { get; set; }
 
 		/// <summary>
+		/// Whether to stack the values of each series on top of each other. Possible values are null to disable, 'normal' to stack by value or 'percent'.
+		/// </summary>
+		public Stackings? Stacking { get; set; }
+
+		/// <summary>
 		/// A wrapper object for all the series options in specific states.
 		/// </summary>
-		public PlotOptionsBoxplotStates States { get; set; }
-
-		/// <summary>
-		/// The color of the stem, the vertical line extending from the box to the whiskers. If <code>null</code>, the series color is used.
-		/// Default: null
-		/// </summary>
-		public Color? StemColor { get; set; }
-
-		/// <summary>
-		/// The dash style of the stem, the vertical line extending from the box to the whiskers.
-		/// Default: Solid
-		/// </summary>
-		public DashStyles? StemDashStyle { get; set; }
-
-		/// <summary>
-		/// The width of the stem, the vertical line extending from the box to the whiskers. If <code>null</code>, the width is inherited from the <a href='#plotOptions.boxplot.lineWidth'>lineWidth</a> option.
-		/// Default: null
-		/// </summary>
-		public Number? StemWidth { get; set; }
+		public PlotOptionsArearangeStates States { get; set; }
 
 		/// <summary>
 		/// Sticky tracking of mouse events. When true, the <code>mouseOut</code> event on a series isn't triggered until the mouse moves over another series, or out of the plot area. When false, the <code>mouseOut</code> event on a series is triggered when the mouse leaves the area around the series' graph or markers. This also implies the tooltip. When <code>stickyTracking</code> is false and <code>tooltip.shared</code> is false, the  tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc.
@@ -206,7 +171,13 @@ namespace DotNet.HighStock.Options
 		/// <summary>
 		/// A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href='#tooltip'>tooltip</a>, but only the following properties can be defined on a series level.
 		/// </summary>
-		public PlotOptionsBoxplotTooltip Tooltip { get; set; }
+		public PlotOptionsArearangeTooltip Tooltip { get; set; }
+
+		/// <summary>
+		/// Whether the whole area or just the line should respond to mouseover tooltips and other mouse or touch events.
+		/// Default: true
+		/// </summary>
+		public bool? TrackByArea { get; set; }
 
 		/// <summary>
 		/// When a series contains a data array that is longer than this, only one dimensional arrays of numbers, or two dimensional arrays with x and y values are allowed. Also, only the first point is tested, and the rest are assumed to be the same format. This saves expensive data checking and indexing in long series. Set it to <code>0</code> disable.
@@ -219,25 +190,6 @@ namespace DotNet.HighStock.Options
 		/// Default: true
 		/// </summary>
 		public bool? Visible { get; set; }
-
-		/// <summary>
-		/// The color of the whiskers, the horizontal lines marking low and high values. When <code>null</code>, the general series color is used.
-		/// Default: null
-		/// </summary>
-		public Color? WhiskerColor { get; set; }
-
-		/// <summary>
-		/// The length of the whiskers, the horizontal lines marking low and high values. It can be a numerical pixel value, or a percentage value of the box width. Set <code>0</code> to disable whiskers.
-		/// Default: 50%
-		/// </summary>
-		[JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]
-		public PercentageOrPixel WhiskerLength { get; set; }
-
-		/// <summary>
-		/// The line width of the whiskers, the horizontal lines marking low and high values. When <code>null</code>, the general <a href='#plotOptions.boxplot.lineWidth'>lineWidth</a> applies.
-		/// Default: 2
-		/// </summary>
-		public Number? WhiskerWidth { get; set; }
 
 	}
 

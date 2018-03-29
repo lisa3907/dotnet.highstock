@@ -6,7 +6,10 @@ using DotNet.HighStock.Helpers;
 
 namespace DotNet.HighStock.Options
 {
-	public class PlotOptionsSpline
+	/// <summary>
+	/// <p>General options for all series types.</p>
+	/// </summary>
+	public class PlotOptionsSeries
 	{
 		/// <summary>
 		/// Allow this series' points to be selected by clicking on the markers, bars or pie slices.
@@ -55,7 +58,7 @@ namespace DotNet.HighStock.Options
 		/// </summary>
 		public DashStyles? DashStyle { get; set; }
 
-		public PlotOptionsSplineDataLabels DataLabels { get; set; }
+		public PlotOptionsSeriesDataLabels DataLabels { get; set; }
 
 		/// <summary>
 		/// Enable or disable the mouse tracking for a specific series. This includes point tooltips and click events on graphs and points. For large datasets it improves performance.
@@ -63,7 +66,7 @@ namespace DotNet.HighStock.Options
 		/// </summary>
 		public bool? EnableMouseTracking { get; set; }
 
-		public PlotOptionsSplineEvents Events { get; set; }
+		public PlotOptionsSeriesEvents Events { get; set; }
 
 		/// <summary>
 		/// Pixel with of the graph line.
@@ -76,7 +79,7 @@ namespace DotNet.HighStock.Options
 		/// </summary>
 		public string LinkedTo { get; set; }
 
-		public PlotOptionsSplineMarker Marker { get; set; }
+		public PlotOptionsSeriesMarker Marker { get; set; }
 
 		/// <summary>
 		/// The color for the parts of the graph or points that are below the <a href='#plotOptions.series.threshold'>threshold</a>.
@@ -87,7 +90,7 @@ namespace DotNet.HighStock.Options
 		/// <summary>
 		/// Properties for each single point
 		/// </summary>
-		public PlotOptionsSplinePoint Point { get; set; }
+		public PlotOptionsSeriesPoint Point { get; set; }
 
 		/// <summary>
 		/// <p>If no x values are given for the points in a series, pointInterval defines the interval of the x values. For example, if a series contains one value every decade starting from year 0, set pointInterval to 10.</p>
@@ -95,10 +98,11 @@ namespace DotNet.HighStock.Options
 		/// </summary>
 		public Number? PointInterval { get; set; }
 
-		/// <summary>
-		/// <p>Possible values: null, 'on', 'between'.</p><p>In a column chart, when pointPlacement is 'on', the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is 'between', the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart.</p><p>Since Highstock 3.0.2, the point placement can also be numeric, where 0 is on the axis value, -0.5 is between this value and the previous, and 0.5 is between this value and the next. Unlike the textual options, numeric point placement options won't affect axis padding.</p><p>Defaults to <code>null</code> in cartesian charts, <code>'between'</code> in polar charts.
-		/// </summary>
-		[JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
+        /// <summary>
+        /// <p>Possible values: null, 'on', 'between'.</p><p>In a column chart, when pointPlacement is 'on', the point will not create any padding of the X axis. In a polar column chart this means that the first column points directly north. If the pointPlacement is 'between', the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart.</p><p>Since Highstock 3.0.2, the point placement can also be numeric, where 0 is on the axis value, -0.5 is between this value and the previous, and 0.5 is between this value and the next. Unlike the textual options, numeric point placement options won't affect axis padding.</p><p>Defaults to <code>null</code> in cartesian charts, <code>'between'</code> in polar charts.
+        /// </p>
+        /// </summary>
+        [JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
 		public PointPlacement PointPlacement { get; set; }
 
 		/// <summary>
@@ -140,7 +144,7 @@ namespace DotNet.HighStock.Options
 		/// <summary>
 		/// A wrapper object for all the series options in specific states.
 		/// </summary>
-		public PlotOptionsSplineStates States { get; set; }
+		public PlotOptionsSeriesStates States { get; set; }
 
 		/// <summary>
 		/// Sticky tracking of mouse events. When true, the <code>mouseOut</code> event on a series isn't triggered until the mouse moves over another series, or out of the plot area. When false, the <code>mouseOut</code> event on a series is triggered when the mouse leaves the area around the series' graph or markers. This also implies the tooltip. When <code>stickyTracking</code> is false and <code>tooltip.shared</code> is false, the  tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc.
@@ -157,7 +161,7 @@ namespace DotNet.HighStock.Options
 		/// <summary>
 		/// A configuration object for the tooltip rendering of each single series. Properties are inherited from <a href='#tooltip'>tooltip</a>, but only the following properties can be defined on a series level.
 		/// </summary>
-		public PlotOptionsSplineTooltip Tooltip { get; set; }
+		public PlotOptionsSeriesTooltip Tooltip { get; set; }
 
 		/// <summary>
 		/// When a series contains a data array that is longer than this, only one dimensional arrays of numbers, or two dimensional arrays with x and y values are allowed. Also, only the first point is tested, and the rest are assumed to be the same format. This saves expensive data checking and indexing in long series. Set it to <code>0</code> disable.
