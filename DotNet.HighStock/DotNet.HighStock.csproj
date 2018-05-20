@@ -9,7 +9,7 @@
     <Authors>SEONGAHN LEE</Authors>
     <TargetFrameworks>net462;net471;netcoreapp2.0</TargetFrameworks>
     <AssemblyName>DotNet.HighStock</AssemblyName>
-    <PackageId>DotNet.HighStock.Core</PackageId>
+    <PackageId>DotNet.HighStock</PackageId>
     <PackageTags>highstock;highchart</PackageTags>
     <PackageIconUrl>https://github.com/lisa3907/dotnet.highstock/blob/master/DotNet.HighStock.Core/highstock.ico?raw=true</PackageIconUrl>
     <PackageProjectUrl>https://github.com/lisa3907/dotnet.highstock</PackageProjectUrl>
