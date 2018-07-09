@@ -6,16 +6,15 @@ As you know, highcharts that draw charts on web pages are becoming popular.
 However, if you are a .Net C# programmer, DotNet.HighStock might be useful
 We created DotNet.HighStock using open-source dotnet.highcharts.
 
-This project started in 2014/12.
-I plan to update it continuously.
+This project started in 2014/12. I plan to update it continuously.
 
 [sample chart site](http://chart.bgc-e.com)
 
 ## Tools
 
-- Microsfot Visual Studio community 2017 version 15.4.0
+- Microsfot Visual Studio community 2017 version 15.7.4
 
-- .net core 2.0, .net framework 4.7
+- .net core 2.1, .net framework 4.6.2
 
 ## License
 
@@ -32,10 +31,12 @@ Read [LICENSE](LICENSE)
 ```
 2018-03-29: upgrade .net core 2.0 & net47
 
+2018-07-10: upgrade .net core 2.1 & downgrade net62
+
 ```
 
 ## Contact
 
-Home-Page: http://www.odinsoftware.co.kr
+home-page: http://www.odinsoftware.co.kr
 
-E-MAIL: help@odinsoftware.co.kr
+e-mail: help@odinsoftware.co.kr
