@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "BitCoin.AspNet": {
+    "DotNet.HighStock.Sample": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "http://localhost:5124",

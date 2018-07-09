@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BitCoin.AspNet
+namespace DotNet.HighStock.Sample
 {
     /// <summary>
     /// 

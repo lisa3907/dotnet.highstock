@@ -1,19 +1,24 @@
-﻿using System;
+﻿using DotNet.HighStock.Enums;
+using DotNet.HighStock.Options;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using OdinSdk.BaseLib.Configuration;
+using OdinSdk.BaseLib.WebApi;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DotNet.HighStock;
-using DotNet.HighStock.Enums;
-using DotNet.HighStock.Options;
-using Microsoft.AspNetCore.Mvc;
-using OdinSdk.BaseLib.Configuration;
-using OdinSdk.BaseLib.WebApi;
 
-namespace BitCoin.AspNet.Controllers
+namespace DotNet.HighStock.Sample.Controllers
 {
     public class HomeController : Controller
     {
         private static CConfig __cconfig = new CConfig();
+
+        public HomeController(IConfigurationRoot config_root)
+        {
+            __cconfig.SetConfigRoot(config_root);
+        }
 
         private CHttpClient __web_client = null;
 
@@ -59,11 +64,13 @@ namespace BitCoin.AspNet.Controllers
             ViewData["Message"] = "This is bitcoin price index page.";
             return View();
         }
+
         public IActionResult Contact()
         {
             ViewData["Message"] = "Our Company Contact";
             return View();
         }
+
         public IActionResult Error()
         {
             return View();

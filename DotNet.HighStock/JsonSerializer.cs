@@ -1,13 +1,13 @@
-﻿using System;
+﻿using DotNet.HighStock.Attributes;
+using DotNet.HighStock.Enums;
+using DotNet.HighStock.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using DotNet.HighStock.Attributes;
-using DotNet.HighStock.Enums;
-using DotNet.HighStock.Helpers;
 
 namespace DotNet.HighStock
 {
@@ -35,7 +35,6 @@ namespace DotNet.HighStock
 
             return GetJsonObject(obj, appendCurlyBrackets);
         }
-
 
         static string GetJsonArray(Array obj, bool useCurlyBracketsForObject)
         {

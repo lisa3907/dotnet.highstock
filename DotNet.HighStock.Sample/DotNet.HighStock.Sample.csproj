@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <PreserveCompilationContext>true</PreserveCompilationContext>
-    <AssemblyName>DotNet.HighStock.Core.Sample</AssemblyName>
+    <AssemblyName>DotNet.HighStock.Sample</AssemblyName>
     <OutputType>Exe</OutputType>
     <PackageId>DotNet.HighStock.Core.Sample</PackageId>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -70,5 +70,6 @@
   </PropertyGroup>
   <PropertyGroup>
     <_HasReferenceToSystemRuntime>true</_HasReferenceToSystemRuntime>
+    <RootNamespace>DotNet.HighStock.Sample</RootNamespace>
   </PropertyGroup>  
 </Project>

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using System.IO;
 
-namespace BitCoin.AspNet
+namespace DotNet.HighStock.Sample
 {
     public class Program
     {
@@ -15,7 +12,7 @@ namespace BitCoin.AspNet
                 .UseKestrel()
                 .UseUrls("http://*:5124")
                 .UseContentRoot(Directory.GetCurrentDirectory())
-                //.UseIISIntegration()
+                .UseIISIntegration()
                 .UseStartup<Startup>()
                 .Build();
 

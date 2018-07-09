@@ -3,8 +3,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using OdinSdk.BaseLib.Configuration;
 
-namespace BitCoin.AspNet
+namespace DotNet.HighStock.Sample
 {
     public class Startup
     {
@@ -13,6 +14,7 @@ namespace BitCoin.AspNet
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .AddEncryptedProvider()
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
 
             if (env.IsDevelopment())
@@ -35,6 +37,7 @@ namespace BitCoin.AspNet
             // Add framework services.
             //services.AddApplicationInsightsTelemetry(Configuration);
 
+            services.AddSingleton(Configuration);
             services.AddMvc();
         }
 
