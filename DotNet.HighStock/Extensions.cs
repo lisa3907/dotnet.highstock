@@ -17,19 +17,19 @@ namespace DotNet.HighStock
         {
             if (value != null)
                 return String.Format(format, value.Value.ToString(CultureInfo.InvariantCulture));
-            return String.Empty;
+            return "";
         }
 
         public static string FormatWith(this string format, ChartTypes? value)
         {
             if (value != null)
                 return String.Format(format, value.Value.ToString().ToLowerInvariant());
-            return String.Empty;
+            return "";
         }
 
         public static void Append(this StringBuilder sb, string value, int tabs)
         {
-            string tabsInBuilder = String.Empty;
+            string tabsInBuilder = "";
             for (int i = 0; i < tabs; i++)
                 tabsInBuilder += "\t";
 
@@ -38,7 +38,7 @@ namespace DotNet.HighStock
 
         public static void AppendLine(this StringBuilder sb, string value, int tabs)
         {
-            string tabsInBuilder = String.Empty;
+            string tabsInBuilder = "";
             for (int i = 0; i < tabs; i++)
                 tabsInBuilder += "\t";
 
