@@ -26,7 +26,6 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Html.Abstractions" Version="2.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="2.1.1" />
-    <PackageReference Include="OdinSdk.BaseLib" Version="2.1.2" />
     <PackageReference Include="System.Reflection.TypeExtensions" Version="4.5.0" />
   </ItemGroup>
 
