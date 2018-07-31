@@ -14,6 +14,7 @@ namespace DotNet.HighStock
             get;
             private set;
         }
+
         internal string ContainerName
         {
             get;
@@ -25,6 +26,7 @@ namespace DotNet.HighStock
             get;
             private set;
         }
+
         internal IDictionary<string, string> JsFunctions
         {
             get;
@@ -43,26 +45,105 @@ namespace DotNet.HighStock
             private set;
         }
 
-        Chart _Chart;
-        Credits _Credits;
-        Exporting _Exporting;
-        Labels _Labels;
-        Legend _Legend;
-        Loading _Loading;
-        Navigation _Navigation;
-        Navigator _Navigator;
-        PlotOptions _PlotOptions;
-        RangeSelector _RangeSelector;
-        Scrollbar _Scrollbar;
-        Series _Series;
-        Series[] _SeriesArray;
-        Subtitle _Subtitle;
-        Title _Title;
-        Tooltip _Tooltip;
-        XAxis _XAxis;
-        XAxis[] _XAxisArray;
-        YAxis _YAxis;
-        YAxis[] _YAxisArray;
+        private Chart chart
+        {
+            get; set;
+        }
+
+        private Credits credits
+        {
+            get; set;
+        }
+
+        private Exporting exporting
+        {
+            get; set;
+        }
+
+        private Labels labels
+        {
+            get; set;
+        }
+
+        private Legend legend
+        {
+            get; set;
+        }
+
+        private Loading loading
+        {
+            get; set;
+        }
+
+        private Navigation navigation
+        {
+            get; set;
+        }
+
+        private Navigator navigator
+        {
+            get; set;
+        }
+
+        private PlotOptions plotOptions
+        {
+            get; set;
+        }
+
+        private RangeSelector rangeSelector
+        {
+            get; set;
+        }
+
+        private Scrollbar scrollbar
+        {
+            get; set;
+        }
+
+        private Series series
+        {
+            get; set;
+        }
+
+        private Series[] seriesArray
+        {
+            get; set;
+        }
+
+        private Subtitle subtitle
+        {
+            get; set;
+        }
+
+        private Title title
+        {
+            get; set;
+        }
+
+        private Tooltip tooltip
+        {
+            get; set;
+        }
+
+        private XAxis xAxis
+        {
+            get; set;
+        }
+
+        private XAxis[] xAxisArray
+        {
+            get; set;
+        }
+
+        private YAxis yAxis
+        {
+            get; set;
+        }
+
+        private YAxis[] yAxisArray
+        {
+            get; set;
+        }
 
         /// <summary>
         /// The chart object is the JavaScript object representing a single chart in the web page.
@@ -99,7 +180,7 @@ namespace DotNet.HighStock
         /// <returns></returns>
         public HighStock InitChart(Chart chart)
         {
-            _Chart = chart;
+            this.chart = chart;
             return this;
         }
 
@@ -109,7 +190,7 @@ namespace DotNet.HighStock
         /// </summary>
         public HighStock SetCredits(Credits credits)
         {
-            _Credits = credits;
+            this.credits = credits;
             return this;
         }
 
@@ -120,7 +201,7 @@ namespace DotNet.HighStock
         /// <returns></returns>
         public HighStock SetExporting(Exporting exporting)
         {
-            _Exporting = exporting;
+            this.exporting = exporting;
             return this;
         }
 
@@ -131,7 +212,7 @@ namespace DotNet.HighStock
         /// <returns></returns>
         public HighStock SetLabels(Labels labels)
         {
-            _Labels = labels;
+            this.labels = labels;
             return this;
         }
 
@@ -142,7 +223,7 @@ namespace DotNet.HighStock
         /// <returns></returns>
         public HighStock SetLegend(Legend legend)
         {
-            _Legend = legend;
+            this.legend = legend;
             return this;
         }
 
@@ -156,7 +237,7 @@ namespace DotNet.HighStock
         /// <returns></returns>
         public HighStock SetLoading(Loading loading)
         {
-            _Loading = loading;
+            this.loading = loading;
             return this;
         }
 
@@ -167,7 +248,7 @@ namespace DotNet.HighStock
         /// <returns></returns>
         public HighStock SetNavigation(Navigation navigation)
         {
-            _Navigation = navigation;
+            this.navigation = navigation;
             return this;
         }
 
@@ -179,7 +260,7 @@ namespace DotNet.HighStock
         /// <returns></returns>
         public HighStock SetNavigator(Navigator navigator)
         {
-            _Navigator = navigator;
+            this.navigator = navigator;
             return this;
         }
 
@@ -194,7 +275,7 @@ namespace DotNet.HighStock
         /// <returns></returns>
         public HighStock SetPlotOptions(PlotOptions plotOptions)
         {
-            _PlotOptions = plotOptions;
+            this.plotOptions = plotOptions;
             return this;
         }
 
@@ -207,7 +288,7 @@ namespace DotNet.HighStock
         /// <returns></returns>
         public HighStock SetRangeSelector(RangeSelector rangeSelector)
         {
-            _RangeSelector = rangeSelector;
+            this.rangeSelector = rangeSelector;
             return this;
         }
 
@@ -218,7 +299,7 @@ namespace DotNet.HighStock
         /// <returns></returns>
         public HighStock SetScrollbar(Scrollbar scrollbar)
         {
-            _Scrollbar = scrollbar;
+            this.scrollbar = scrollbar;
             return this;
         }
 
@@ -231,7 +312,7 @@ namespace DotNet.HighStock
         /// <returns></returns>
         public HighStock SetSeries(Series series)
         {
-            _Series = series;
+            this.series = series;
             return this;
         }
 
@@ -244,7 +325,7 @@ namespace DotNet.HighStock
         /// <returns></returns>
         public HighStock SetSeries(Series[] seriesArray)
         {
-            _SeriesArray = seriesArray;
+            this.seriesArray = seriesArray;
             return this;
         }
 
@@ -255,7 +336,7 @@ namespace DotNet.HighStock
         /// <returns></returns>
         public HighStock SetSubtitle(Subtitle subtitle)
         {
-            _Subtitle = subtitle;
+            this.subtitle = subtitle;
             return this;
         }
 
@@ -266,7 +347,7 @@ namespace DotNet.HighStock
         /// <returns></returns>
         public HighStock SetTitle(Title title)
         {
-            _Title = title;
+            this.title = title;
             return this;
         }
 
@@ -277,7 +358,7 @@ namespace DotNet.HighStock
         /// <returns></returns>
         public HighStock SetTooltip(Tooltip tooltip)
         {
-            _Tooltip = tooltip;
+            this.tooltip = tooltip;
             return this;
         }
 
@@ -289,7 +370,7 @@ namespace DotNet.HighStock
         /// <returns></returns>
         public HighStock SetXAxis(XAxis xAxis)
         {
-            _XAxis = xAxis;
+            this.xAxis = xAxis;
             return this;
         }
 
@@ -301,7 +382,7 @@ namespace DotNet.HighStock
         /// <returns></returns>
         public HighStock SetXAxis(XAxis[] xAxisArray)
         {
-            _XAxisArray = xAxisArray;
+            this.xAxisArray = xAxisArray;
             return this;
         }
 
@@ -313,7 +394,7 @@ namespace DotNet.HighStock
         /// <returns></returns>
         public HighStock SetYAxis(YAxis yAxis)
         {
-            _YAxis = yAxis;
+            this.yAxis = yAxis;
             return this;
         }
 
@@ -324,7 +405,7 @@ namespace DotNet.HighStock
         /// <returns></returns>
         public HighStock SetYAxis(YAxis[] yAxisArray)
         {
-            _YAxisArray = yAxisArray;
+            this.yAxisArray = yAxisArray;
             return this;
         }
 
@@ -376,20 +457,20 @@ namespace DotNet.HighStock
         /// <returns></returns>
         public HtmlString ChartScriptHtmlString()
         {
-            StringBuilder scripts = new StringBuilder();
+            var _scripts = new StringBuilder();
 
-            scripts.AppendLine("<script type='text/javascript'>");
+            _scripts.AppendLine("<script type='text/javascript'>");
             if (Options != null)
-                scripts.AppendLine("Highcharts.setOptions({0});".FormatWith(JsonSerializer.Serialize(Options)));
+                _scripts.AppendLine("Highcharts.setOptions({0});".FormatWith(JsonSerializer.Serialize(Options)));
 
-            scripts.AppendLine("var {0};".FormatWith(Name));
-            scripts.AppendLine(!String.IsNullOrEmpty(FunctionName) ? String.Format("function {0}() {{", FunctionName) : "$(document).ready(function() {");
-            scripts.AppendHighstock(this);
-            scripts.AppendLine(!String.IsNullOrEmpty(FunctionName) ? "}" : "});");
+            _scripts.AppendLine("var {0};".FormatWith(Name));
+            _scripts.AppendLine(!String.IsNullOrEmpty(FunctionName) ? String.Format("function {0}() {{", FunctionName) : "$(document).ready(function() {");
+            _scripts.AppendHighstock(this);
+            _scripts.AppendLine(!String.IsNullOrEmpty(FunctionName) ? "}" : "});");
 
-            scripts.AppendLine("</script>");
+            _scripts.AppendLine("</script>");
 
-            return new HtmlString(scripts.ToString());
+            return new HtmlString(_scripts.ToString());
         }
 
         #region IHtmlString Members
@@ -403,124 +484,124 @@ namespace DotNet.HighStock
 
         public string GetOptions()
         {
-            StringBuilder options = new StringBuilder();
-            options.Append(_Chart != null ? "chart: {{ renderTo:'{0}', {1} }}".FormatWith(ContainerName, JsonSerializer.Serialize(_Chart, false)) : "chart: {{ renderTo:'{0}' }}".FormatWith(ContainerName));
+            var _options = new StringBuilder();
+            _options.Append(chart != null ? "chart: {{ renderTo:'{0}', {1} }}".FormatWith(ContainerName, JsonSerializer.Serialize(chart, false)) : "chart: {{ renderTo:'{0}' }}".FormatWith(ContainerName));
 
-            if (_Credits != null)
+            if (credits != null)
             {
-                options.AppendLine(", ");
-                options.Append("credits: {0}".FormatWith(JsonSerializer.Serialize(_Credits)), 2);
+                _options.AppendLine(", ");
+                _options.Append("credits: {0}".FormatWith(JsonSerializer.Serialize(credits)), 2);
             }
 
-            if (_Labels != null)
+            if (labels != null)
             {
-                options.AppendLine(", ");
-                options.Append("labels: {0}".FormatWith(JsonSerializer.Serialize(_Labels)), 2);
+                _options.AppendLine(", ");
+                _options.Append("labels: {0}".FormatWith(JsonSerializer.Serialize(labels)), 2);
             }
 
-            if (_Legend != null)
+            if (legend != null)
             {
-                options.AppendLine(", ");
-                options.Append("legend: {0}".FormatWith(JsonSerializer.Serialize(_Legend)), 2);
+                _options.AppendLine(", ");
+                _options.Append("legend: {0}".FormatWith(JsonSerializer.Serialize(legend)), 2);
             }
 
-            if (_Loading != null)
+            if (loading != null)
             {
-                options.AppendLine(", ");
-                options.Append("loading: {0}".FormatWith(JsonSerializer.Serialize(_Loading)), 2);
+                _options.AppendLine(", ");
+                _options.Append("loading: {0}".FormatWith(JsonSerializer.Serialize(loading)), 2);
             }
 
-            if (_PlotOptions != null)
+            if (plotOptions != null)
             {
-                options.AppendLine(", ");
-                options.Append("plotOptions: {0}".FormatWith(JsonSerializer.Serialize(_PlotOptions)), 2);
+                _options.AppendLine(", ");
+                _options.Append("plotOptions: {0}".FormatWith(JsonSerializer.Serialize(plotOptions)), 2);
             }
 
-            if (_RangeSelector != null)
+            if (rangeSelector != null)
             {
-                options.AppendLine(", ");
-                options.Append("rangeSelector: {0}".FormatWith(JsonSerializer.Serialize(_RangeSelector)), 2);
+                _options.AppendLine(", ");
+                _options.Append("rangeSelector: {0}".FormatWith(JsonSerializer.Serialize(rangeSelector)), 2);
             }
 
-            if (_Scrollbar != null)
+            if (scrollbar != null)
             {
-                options.AppendLine(", ");
-                options.Append("scrollbar: {0}".FormatWith(JsonSerializer.Serialize(_Scrollbar)), 2);
+                _options.AppendLine(", ");
+                _options.Append("scrollbar: {0}".FormatWith(JsonSerializer.Serialize(scrollbar)), 2);
             }
 
-            if (_Subtitle != null)
+            if (subtitle != null)
             {
-                options.AppendLine(", ");
-                options.Append("subtitle: {0}".FormatWith(JsonSerializer.Serialize(_Subtitle)), 2);
+                _options.AppendLine(", ");
+                _options.Append("subtitle: {0}".FormatWith(JsonSerializer.Serialize(subtitle)), 2);
             }
 
-            if (_Title != null)
+            if (title != null)
             {
-                options.AppendLine(", ");
-                options.Append("title: {0}".FormatWith(JsonSerializer.Serialize(_Title)), 2);
+                _options.AppendLine(", ");
+                _options.Append("title: {0}".FormatWith(JsonSerializer.Serialize(title)), 2);
             }
 
-            if (_Tooltip != null)
+            if (tooltip != null)
             {
-                options.AppendLine(", ");
-                options.Append("tooltip: {0}".FormatWith(JsonSerializer.Serialize(_Tooltip)), 2);
+                _options.AppendLine(", ");
+                _options.Append("tooltip: {0}".FormatWith(JsonSerializer.Serialize(tooltip)), 2);
             }
 
-            if (_XAxis != null)
+            if (xAxis != null)
             {
-                options.AppendLine(", ");
-                options.Append("xAxis: {0}".FormatWith(JsonSerializer.Serialize(_XAxis)), 2);
+                _options.AppendLine(", ");
+                _options.Append("xAxis: {0}".FormatWith(JsonSerializer.Serialize(xAxis)), 2);
             }
 
-            if (_XAxisArray != null)
+            if (xAxisArray != null)
             {
-                options.AppendLine(", ");
-                options.Append("xAxis: {0}".FormatWith(JsonSerializer.Serialize(_XAxisArray)), 2);
+                _options.AppendLine(", ");
+                _options.Append("xAxis: {0}".FormatWith(JsonSerializer.Serialize(xAxisArray)), 2);
             }
 
-            if (_YAxis != null)
+            if (yAxis != null)
             {
-                options.AppendLine(", ");
-                options.Append("yAxis: {0}".FormatWith(JsonSerializer.Serialize(_YAxis)), 2);
+                _options.AppendLine(", ");
+                _options.Append("yAxis: {0}".FormatWith(JsonSerializer.Serialize(yAxis)), 2);
             }
-            else if (_YAxisArray != null)
+            else if (yAxisArray != null)
             {
-                options.AppendLine(", ");
-                options.Append("yAxis: {0}".FormatWith(JsonSerializer.Serialize(_YAxisArray)), 2);
-            }
-
-            if (_Exporting != null)
-            {
-                options.AppendLine(", ");
-                options.Append("exporting: {0}".FormatWith(JsonSerializer.Serialize(_Exporting)), 2);
+                _options.AppendLine(", ");
+                _options.Append("yAxis: {0}".FormatWith(JsonSerializer.Serialize(yAxisArray)), 2);
             }
 
-            if (_Navigation != null)
+            if (exporting != null)
             {
-                options.AppendLine(", ");
-                options.Append("navigation: {0}".FormatWith(JsonSerializer.Serialize(_Navigation)), 2);
+                _options.AppendLine(", ");
+                _options.Append("exporting: {0}".FormatWith(JsonSerializer.Serialize(exporting)), 2);
             }
 
-            if (_Navigator != null)
+            if (navigation != null)
             {
-                options.AppendLine(", ");
-                options.Append("navigator: {0}".FormatWith(JsonSerializer.Serialize(_Navigator)), 2);
+                _options.AppendLine(", ");
+                _options.Append("navigation: {0}".FormatWith(JsonSerializer.Serialize(navigation)), 2);
             }
 
-            if (_Series != null)
+            if (navigator != null)
             {
-                options.AppendLine(", ");
-                options.Append("series: [{0}]".FormatWith(JsonSerializer.Serialize(_Series)), 2);
-            }
-            else if (_SeriesArray != null)
-            {
-                options.AppendLine(", ");
-                options.Append("series: {0}".FormatWith(JsonSerializer.Serialize(_SeriesArray)), 2);
+                _options.AppendLine(", ");
+                _options.Append("navigator: {0}".FormatWith(JsonSerializer.Serialize(navigator)), 2);
             }
 
-            options.AppendLine();
+            if (series != null)
+            {
+                _options.AppendLine(", ");
+                _options.Append("series: [{0}]".FormatWith(JsonSerializer.Serialize(series)), 2);
+            }
+            else if (seriesArray != null)
+            {
+                _options.AppendLine(", ");
+                _options.Append("series: {0}".FormatWith(JsonSerializer.Serialize(seriesArray)), 2);
+            }
 
-            return options.ToString();
+            _options.AppendLine();
+
+            return _options.ToString();
         }
     }
 }

@@ -131,11 +131,11 @@ namespace DotNet.HighStock.Options
             set;
         }
 
-		public DashStyles? DashStyle
-		{
-			get;
-			set;
-		}
+        public DashStyles? DashStyle
+        {
+            get;
+            set;
+        }
 
         [JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
         public PlotOptionsArea PlotOptionsArea
@@ -256,5 +256,4 @@ namespace DotNet.HighStock.Options
             set;
         }
     }
-
 }

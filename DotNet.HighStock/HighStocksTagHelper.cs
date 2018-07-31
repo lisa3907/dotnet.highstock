@@ -9,25 +9,37 @@ namespace DotNet.HighStock
         /// 차트 제목
         /// </summary>
         [HtmlAttributeName("title")]
-        public string Title { get; set; }
+        public string Title
+        {
+            get; set;
+        }
 
         /// <summary>
         /// 
         /// </summary>
         [HtmlAttributeName("width")]
-        public int Width { get; set; }
+        public int Width
+        {
+            get; set;
+        }
 
         /// <summary>
         /// 
         /// </summary>
         [HtmlAttributeName("height")]
-        public int Height { get; set; }
+        public int Height
+        {
+            get; set;
+        }
 
         /// <summary>
         /// 
         /// </summary>
         [HtmlAttributeName("stock")]
-        public HighStock Stock { get; set; }
+        public HighStock Stock
+        {
+            get; set;
+        }
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {

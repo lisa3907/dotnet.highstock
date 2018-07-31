@@ -7,16 +7,17 @@
     /// </summary>
     public enum ChartTypes
     {
-        Line,
-        Spline,
         Area,
         Areaspline,
-        Column,
-        Bar,
-        Pie,
-        Scatter,
         Arearange,
         Areasplinerange,
+        Bar,
+        Candlestick,
+        Column,
+        Line,
+        Spline,
+        Pie,
+        Scatter,
         Columnrange,
         Gauge,
         Solidgauge,
