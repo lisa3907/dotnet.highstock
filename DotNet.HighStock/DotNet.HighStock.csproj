@@ -19,8 +19,8 @@
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>2.1.0</Version>
-    <PackageReleaseNotes>upgrade net462&amp;netcoreapp2.1, icon url fixed</PackageReleaseNotes>
+    <Version>2.2.0</Version>
+    <PackageReleaseNotes>update chart types</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

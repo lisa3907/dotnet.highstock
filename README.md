@@ -33,6 +33,8 @@ Read [LICENSE](LICENSE)
 
 2018-07-10: upgrade .net core 2.1 & downgrade net62
 
+2018-08-01: update chart types
+
 ```
 
 ## Contact
