@@ -10,7 +10,7 @@
     <TargetFrameworks>net462;netcoreapp2.1</TargetFrameworks>
     <AssemblyName>DotNet.HighStock</AssemblyName>
     <PackageId>DotNet.HighStock</PackageId>
-    <PackageTags>highstock;highchart;netcoreapp</PackageTags>
+    <PackageTags>highstocks;highstock;highcharts;highchart</PackageTags>
     <PackageIconUrl>https://github.com/lisa3907/dotnet.highstock/blob/master/logo-files/highstock.ico?raw=true</PackageIconUrl>
     <PackageProjectUrl>https://github.com/lisa3907/dotnet.highstock</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/lisa3907/dotnet.highstock/blob/master/LICENSE</PackageLicenseUrl>
