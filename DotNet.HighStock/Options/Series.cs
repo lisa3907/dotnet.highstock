@@ -3,6 +3,7 @@ using System.Drawing;
 using DotNet.HighStock.Enums;
 using DotNet.HighStock.Attributes;
 using DotNet.HighStock.Helpers;
+using System.Collections.Generic;
 
 namespace DotNet.HighStock.Options
 {
@@ -40,6 +41,16 @@ namespace DotNet.HighStock.Options
         /// An id for the series. This can be used after render time to get a pointer to the series object through <code>chart.get()</code>.
         /// </summary>
         public string Id
+        {
+            get;
+            set;
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string LinkedTo
         {
             get;
             set;
@@ -114,6 +125,33 @@ namespace DotNet.HighStock.Options
         /// Define the visual z index of the series.
         /// </summary>
         public Number? ZIndex
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Marker Marker
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public BBLine TopLine
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public BBLine BottomLine
         {
             get;
             set;
