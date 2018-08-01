@@ -115,6 +115,16 @@ namespace DotNet.HighStock.Sample.Controllers
                     Height = 900,
                     ClassName = "chart"
                 })
+                .SetLegend(new Legend
+                {
+                    Enabled = true,
+                    VerticalAlign = VerticalAligns.Bottom,
+                    Align = HorizontalAligns.Center,
+                })
+                .SetPlotOptions(new PlotOptions
+                {
+                    Series = new PlotOptionsSeries{ ShowInLegend = true }
+                })
                 .SetRangeSelector(new RangeSelector
                 {
                     Buttons = new[]
@@ -128,7 +138,7 @@ namespace DotNet.HighStock.Sample.Controllers
                     },
                     InputEnabled = true,
                     Enabled = true,
-                    Selected = 6
+                    Selected = 3
                 })
                 .SetTitle(new Title
                 {
