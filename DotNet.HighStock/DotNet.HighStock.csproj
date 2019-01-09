@@ -7,7 +7,7 @@
     <AssemblyTitle>DotNet.HighStck.Core</AssemblyTitle>
     <VersionPrefix>1.1.4</VersionPrefix>
     <Authors>SEONGAHN LEE</Authors>
-    <TargetFrameworks>net462;netcoreapp2.1</TargetFrameworks>
+    <TargetFrameworks>net462;netcoreapp2.2</TargetFrameworks>
     <AssemblyName>DotNet.HighStock</AssemblyName>
     <PackageId>DotNet.HighStock</PackageId>
     <PackageTags>highstocks;highstock;highcharts;highchart</PackageTags>
@@ -19,14 +19,14 @@
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>2.2.0</Version>
-    <PackageReleaseNotes>update chart types</PackageReleaseNotes>
+    <Version>2.2.1</Version>
+    <PackageReleaseNotes>netcoreapp version up to 2.2</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Html.Abstractions" Version="2.1.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="2.1.1" />
-    <PackageReference Include="System.Reflection.TypeExtensions" Version="4.5.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Html.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="2.2.0" />
+    <PackageReference Include="System.Reflection.TypeExtensions" Version="4.5.1" />
   </ItemGroup>
 
 </Project>
