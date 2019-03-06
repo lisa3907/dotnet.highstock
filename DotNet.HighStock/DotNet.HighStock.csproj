@@ -13,14 +13,14 @@
     <PackageTags>highstocks;highstock;highcharts;highchart</PackageTags>
     <PackageIconUrl>https://github.com/lisa3907/dotnet.highstock/blob/master/logo-files/highstock.ico?raw=true</PackageIconUrl>
     <PackageProjectUrl>https://github.com/lisa3907/dotnet.highstock</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/lisa3907/dotnet.highstock/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
     <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>2.2.1</Version>
-    <PackageReleaseNotes>netcoreapp version up to 2.2</PackageReleaseNotes>
+    <Version>2.2.2</Version>
+    <PackageReleaseNotes>nuget update</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
