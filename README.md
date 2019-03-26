@@ -1,5 +1,9 @@
 # DotNet.HighStock
 
+[![Build status](https://ci.appveyor.com/api/projects/status/dnp9i3t6sexv9tpa?svg=true)](https://ci.appveyor.com/project/lisa3907/dotnet-highstock)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/dotnet.highstock.svg)](https://www.nuget.org/packages/dotnet.highstock)
+[![License](https://img.shields.io/github/license/lisa3907/dotnet.highstock.svg)](https://github.com/lisa3907/dotnet.highstock/blob/master/LICENSE.txt)
+
 This project is an extension of DotNet.Highcharts (https://dotnethighcharts.codeplex.com)
 As you know, highcharts that draw charts on web pages are becoming popular.
 
