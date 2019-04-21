@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <AssemblyName>DotNet.HighStock</AssemblyName>
-
     <Title>Highstock for Dotnet Core</Title>
     <Description>Highstock for .NET C# Programming</Description>
     <Copyright>Copyright ⓒ OdinSoftware Co., Ltd. 2017~2018</Copyright>
