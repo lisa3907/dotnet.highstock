@@ -1,22 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <AssemblyName>DotNet.HighStock</AssemblyName>
+
     <Title>Highstock for Dotnet Core</Title>
     <Description>Highstock for .NET C# Programming</Description>
     <Copyright>Copyright ⓒ OdinSoftware Co., Ltd. 2017~2018</Copyright>
     <AssemblyTitle>DotNet.HighStck.Core</AssemblyTitle>
-    <VersionPrefix>1.1.4</VersionPrefix>
     <Authors>SEONGAHN LEE</Authors>
-    <TargetFrameworks>net462;netcoreapp2.2</TargetFrameworks>
-    <AssemblyName>DotNet.HighStock</AssemblyName>
     <PackageId>DotNet.HighStock</PackageId>
     <PackageTags>highstocks;highstock;highcharts;highchart</PackageTags>
     <PackageIconUrl>https://github.com/lisa3907/dotnet.highstock/blob/master/logo-files/highstock.ico?raw=true</PackageIconUrl>
     <PackageProjectUrl>https://github.com/lisa3907/dotnet.highstock</PackageProjectUrl>
-    <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
-    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
-    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Version>2.2.2</Version>
     <PackageReleaseNotes>nuget update</PackageReleaseNotes>
@@ -26,6 +22,8 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Html.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="2.2.0" />
+    <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
+    <PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
     <PackageReference Include="System.Reflection.TypeExtensions" Version="4.5.1" />
   </ItemGroup>
 
