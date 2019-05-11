@@ -123,7 +123,7 @@ namespace DotNet.HighStock.Sample.Controllers
                 })
                 .SetPlotOptions(new PlotOptions
                 {
-                    Series = new PlotOptionsSeries{ ShowInLegend = true }
+                    Series = new PlotOptionsSeries { ShowInLegend = true }
                 })
                 .SetRangeSelector(new RangeSelector
                 {

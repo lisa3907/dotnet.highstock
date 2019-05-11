@@ -1,7 +1,5 @@
-using System;
-using System.Drawing;
-using DotNet.HighStock.Enums;
 using DotNet.HighStock.Attributes;
+using DotNet.HighStock.Enums;
 using DotNet.HighStock.Helpers;
 
 namespace DotNet.HighStock.Options
@@ -63,7 +61,7 @@ namespace DotNet.HighStock.Options
 
         /// <summary>
         /// The vertical alignment of the title. Can be one of 'top', 'middle' and 'bottom'. When a value is given, the title behaves as floating.
-        /// Default:  
+        /// Default:
         /// </summary>
         public VerticalAligns? VerticalAlign
         {
@@ -90,6 +88,5 @@ namespace DotNet.HighStock.Options
             get;
             set;
         }
-
     }
 }

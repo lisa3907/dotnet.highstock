@@ -7,11 +7,13 @@
             get;
             set;
         }
+
         public bool AddPropertyName
         {
             get;
             set;
         }
+
         public bool UseCurlyBracketsForObject
         {
             get;

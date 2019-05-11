@@ -48,5 +48,5 @@
         Zigzag
     }
 
-    #endregion
+    #endregion DefaultSeriesType enum
 }

@@ -3,7 +3,7 @@ using DotNet.HighStock.Helpers;
 namespace DotNet.HighStock.Options
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public class ButtonsItems
     {
@@ -33,6 +33,5 @@ namespace DotNet.HighStock.Options
             get;
             set;
         }
-
     }
 }

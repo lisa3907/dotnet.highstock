@@ -1,8 +1,8 @@
+using DotNet.HighStock.Attributes;
+using DotNet.HighStock.Enums;
+using DotNet.HighStock.Helpers;
 using System;
 using System.Drawing;
-using DotNet.HighStock.Enums;
-using DotNet.HighStock.Attributes;
-using DotNet.HighStock.Helpers;
 
 namespace DotNet.HighStock.Options
 {
@@ -182,7 +182,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// Allows setting a key to switch between zooming and panning. 
+        /// Allows setting a key to switch between zooming and panning.
         /// </summary>
         public string PanKey
         {
@@ -410,7 +410,5 @@ namespace DotNet.HighStock.Options
             get;
             set;
         }
-
     }
-
 }

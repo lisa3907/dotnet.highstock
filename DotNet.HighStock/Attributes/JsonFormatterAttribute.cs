@@ -1,5 +1,5 @@
-﻿using System;
-using DotNet.HighStock.Helpers;
+﻿using DotNet.HighStock.Helpers;
+using System;
 
 namespace DotNet.HighStock.Attributes
 {
@@ -13,7 +13,7 @@ namespace DotNet.HighStock.Attributes
     public class JsonFormatterAttribute : Attribute
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="jsonValueFormat"></param>
         /// <param name="addPropertyName"></param>
@@ -29,7 +29,7 @@ namespace DotNet.HighStock.Attributes
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public JsonFormatter JsonFormatter
         {

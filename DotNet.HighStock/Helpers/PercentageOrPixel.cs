@@ -21,6 +21,9 @@ namespace DotNet.HighStock.Helpers
         }
 
         [JsonFormatter(addPropertyName: false, useCurlyBracketsForObject: false)]
-        public string Value { get; private set; }
+        public string Value
+        {
+            get; private set;
+        }
     }
 }

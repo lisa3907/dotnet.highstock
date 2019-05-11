@@ -1,6 +1,6 @@
-﻿using System.Drawing;
-using DotNet.HighStock.Attributes;
+﻿using DotNet.HighStock.Attributes;
 using DotNet.HighStock.Enums;
+using System.Drawing;
 
 namespace DotNet.HighStock.Helpers
 {

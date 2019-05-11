@@ -1,6 +1,5 @@
-﻿using System.Drawing;
-using DotNet.HighStock.Attributes;
-using DotNet.HighStock.Options;
+﻿using DotNet.HighStock.Options;
+using System.Drawing;
 
 namespace DotNet.HighStock.Helpers
 {
@@ -17,7 +16,7 @@ namespace DotNet.HighStock.Helpers
         }
 
         /// <summary>
-        /// An array containing the default colors for the chart's series. When all colors are used, new colors are pulled from the start again. 
+        /// An array containing the default colors for the chart's series. When all colors are used, new colors are pulled from the start again.
         /// Defaults to:
         /// <code>
         /// colors: ['#4572A7', '#AA4643', '#89A54E', '#80699B', '#3D96AE', '#DB843D', '#92A8CD', '#A47D7C', '#B5CA92']
@@ -31,7 +30,7 @@ namespace DotNet.HighStock.Helpers
         }
 
         /// <summary>
-        /// Language object. The language object is global and it can't be set on each chart initiation. 
+        /// Language object. The language object is global and it can't be set on each chart initiation.
         /// Instead, use Highstock.setOptions to set it before any chart is initiated.
         /// </summary>
         /// <see cref="http://api.highcharts.com/highstock#lang"/>

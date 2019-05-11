@@ -1,5 +1,4 @@
-﻿using System;
-using DotNet.HighStock.Attributes;
+﻿using DotNet.HighStock.Attributes;
 using DotNet.HighStock.Options;
 
 namespace DotNet.HighStock.Helpers

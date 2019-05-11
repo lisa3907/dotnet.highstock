@@ -4,12 +4,12 @@ using System.Drawing;
 namespace DotNet.HighStock.Options
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public class BBLine
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public BBStyles Styles
         {
@@ -18,7 +18,7 @@ namespace DotNet.HighStock.Options
     }
 
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public class BBStyles
     {
@@ -32,7 +32,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Number? LineWidth
         {

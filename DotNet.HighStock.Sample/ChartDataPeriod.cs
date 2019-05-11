@@ -3,12 +3,12 @@
 namespace DotNet.HighStock.Sample
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public class ChartDataPeriod
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public string r_dealer
         {
@@ -17,7 +17,7 @@ namespace DotNet.HighStock.Sample
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public string r_currency
         {
@@ -26,7 +26,7 @@ namespace DotNet.HighStock.Sample
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public string r_coin
         {
@@ -35,7 +35,7 @@ namespace DotNet.HighStock.Sample
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Int64 r_time_value
         {
@@ -44,7 +44,7 @@ namespace DotNet.HighStock.Sample
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public decimal r_open_price
         {
@@ -53,7 +53,7 @@ namespace DotNet.HighStock.Sample
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public decimal r_close_price
         {
@@ -62,7 +62,7 @@ namespace DotNet.HighStock.Sample
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public decimal r_high_price
         {
@@ -71,7 +71,7 @@ namespace DotNet.HighStock.Sample
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public decimal r_low_price
         {
@@ -80,7 +80,7 @@ namespace DotNet.HighStock.Sample
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public decimal r_sell_volume
         {
@@ -88,9 +88,8 @@ namespace DotNet.HighStock.Sample
             set;
         }
 
-
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public decimal r_sell_amount
         {
@@ -99,7 +98,7 @@ namespace DotNet.HighStock.Sample
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public decimal r_sell_count
         {
@@ -108,7 +107,7 @@ namespace DotNet.HighStock.Sample
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public decimal r_buy_volume
         {
@@ -116,9 +115,8 @@ namespace DotNet.HighStock.Sample
             set;
         }
 
-
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public decimal r_buy_amount
         {
@@ -127,7 +125,7 @@ namespace DotNet.HighStock.Sample
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public decimal r_buy_count
         {
@@ -136,7 +134,7 @@ namespace DotNet.HighStock.Sample
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public decimal r_avg_price_5d
         {
@@ -145,7 +143,7 @@ namespace DotNet.HighStock.Sample
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public decimal r_avg_price_20d
         {
@@ -154,7 +152,7 @@ namespace DotNet.HighStock.Sample
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public decimal r_avg_price_60d
         {
@@ -163,7 +161,7 @@ namespace DotNet.HighStock.Sample
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public decimal r_avg_price_120d
         {

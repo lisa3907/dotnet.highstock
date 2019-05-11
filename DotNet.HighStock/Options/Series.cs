@@ -1,9 +1,8 @@
+using DotNet.HighStock.Attributes;
+using DotNet.HighStock.Enums;
+using DotNet.HighStock.Helpers;
 using System;
 using System.Drawing;
-using DotNet.HighStock.Enums;
-using DotNet.HighStock.Attributes;
-using DotNet.HighStock.Helpers;
-using System.Collections.Generic;
 
 namespace DotNet.HighStock.Options
 {
@@ -46,9 +45,8 @@ namespace DotNet.HighStock.Options
             set;
         }
 
-
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public string LinkedTo
         {
@@ -131,7 +129,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Marker Marker
         {
@@ -140,7 +138,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public BBLine TopLine
         {
@@ -149,7 +147,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public BBLine BottomLine
         {

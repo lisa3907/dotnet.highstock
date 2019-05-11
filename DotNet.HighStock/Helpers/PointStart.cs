@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using DotNet.HighStock.Attributes;
+﻿using DotNet.HighStock.Attributes;
+using System;
 
 namespace DotNet.HighStock.Helpers
 {
-
     /// <summary>
     /// Defines on what value to start the series
     /// </summary>
@@ -16,24 +12,36 @@ namespace DotNet.HighStock.Helpers
         /// Constructor with start point as date time
         /// </summary>
         /// <param name="pointStart"></param>
-        public PointStart(DateTime pointStart) { PointStartDate = pointStart; }
+        public PointStart(DateTime pointStart)
+        {
+            PointStartDate = pointStart;
+        }
 
         /// <summary>
         /// Constructor with start point as number
         /// </summary>
         /// <param name="pointStart"></param>
-        public PointStart(Number pointStart) { PointStartNumber = pointStart; }
+        public PointStart(Number pointStart)
+        {
+            PointStartNumber = pointStart;
+        }
 
         /// <summary>
         /// Date start point
         /// </summary>
         [Name("PointStart")]
-        public DateTime? PointStartDate { get; private set; }
+        public DateTime? PointStartDate
+        {
+            get; private set;
+        }
 
         /// <summary>
         /// Number start point
         /// </summary>
         [Name("PointStart")]
-        public Number? PointStartNumber { get; private set; }
+        public Number? PointStartNumber
+        {
+            get; private set;
+        }
     }
 }

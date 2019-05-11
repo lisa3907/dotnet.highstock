@@ -1,13 +1,12 @@
-using System;
-using System.Drawing;
-using DotNet.HighStock.Enums;
 using DotNet.HighStock.Attributes;
+using DotNet.HighStock.Enums;
 using DotNet.HighStock.Helpers;
+using System;
 
 namespace DotNet.HighStock.Options
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public class YAxisTitle
     {
@@ -21,9 +20,8 @@ namespace DotNet.HighStock.Options
             set;
         }
 
-
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [Obsolete("Deprecated. Set the <code>text</code> to <code>null</code> to disable the title.")]
         public string Enabled
@@ -81,6 +79,5 @@ namespace DotNet.HighStock.Options
             get;
             set;
         }
-
     }
 }

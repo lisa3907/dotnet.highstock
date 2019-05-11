@@ -1,14 +1,14 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Html;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Microsoft.AspNetCore.Html;
 
 namespace DotNet.HighStock
 {
     public class Container : HtmlString
     {
-        readonly List<HighStock> _Highstock;
+        private readonly List<HighStock> _Highstock;
 
         public Container(IEnumerable<HighStock> highstock)
             : base("")
@@ -44,6 +44,6 @@ namespace DotNet.HighStock
             return scripts.ToString();
         }
 
-        #endregion
+        #endregion IHtmlString Members
     }
 }

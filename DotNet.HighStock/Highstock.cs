@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using DotNet.HighStock.Helpers;
+﻿using DotNet.HighStock.Helpers;
 using DotNet.HighStock.Options;
 using Microsoft.AspNetCore.Html;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace DotNet.HighStock
 {
@@ -185,7 +185,7 @@ namespace DotNet.HighStock
         }
 
         /// <summary>
-        /// Highchart by default puts a credits label in the lower right corner of the chart. 
+        /// Highchart by default puts a credits label in the lower right corner of the chart.
         /// This can be changed using these options.
         /// </summary>
         public HighStock SetCredits(Credits credits)
@@ -228,9 +228,9 @@ namespace DotNet.HighStock
         }
 
         /// <summary>
-        /// The loading options control the appearance of the loading screen that covers the plot area on chart operations. 
-        /// This screen only appears after an explicit call to chart.showLoading(). It is a utility for developers to 
-        /// communicate to the end user that something is going on, for example while retrieving new data via an XHR connection. 
+        /// The loading options control the appearance of the loading screen that covers the plot area on chart operations.
+        /// This screen only appears after an explicit call to chart.showLoading(). It is a utility for developers to
+        /// communicate to the end user that something is going on, for example while retrieving new data via an XHR connection.
         /// The "Loading..." text itself is not part of this configuration object, but part of the lang object.
         /// </summary>
         /// <param name="loading"></param>
@@ -253,7 +253,7 @@ namespace DotNet.HighStock
         }
 
         /// <summary>
-        /// The navigator is a small series below the main series, displaying a view of the entire data set. 
+        /// The navigator is a small series below the main series, displaying a view of the entire data set.
         /// It provides tools to zoom in and out on parts of the data as well as panning across the dataset.
         /// </summary>
         /// <param name="navigator"></param>
@@ -265,10 +265,10 @@ namespace DotNet.HighStock
         }
 
         /// <summary>
-        /// The plotOptions is a wrapper object for config objects for each series type. The config objects for each series 
+        /// The plotOptions is a wrapper object for config objects for each series type. The config objects for each series
         /// can also be overridden for each series item as given in the series array.
-        /// Configuration options for the series are given in three levels. Options for all series in a chart are given in 
-        /// the plotOptions.series object. Then options for all series of a specific type are given in the plotOptions of 
+        /// Configuration options for the series are given in three levels. Options for all series in a chart are given in
+        /// the plotOptions.series object. Then options for all series of a specific type are given in the plotOptions of
         /// that type, for example plotOptions.line. Next, options for one single series are given in the series array.
         /// </summary>
         /// <param name="plotOptions"></param>
@@ -280,8 +280,8 @@ namespace DotNet.HighStock
         }
 
         /// <summary>
-        /// The range selector is a tool for selecting ranges to display within the chart. 
-        /// It provides buttons to select preconfigured ranges in the chart, like 1 day, 1 week, 1 month etc. 
+        /// The range selector is a tool for selecting ranges to display within the chart.
+        /// It provides buttons to select preconfigured ranges in the chart, like 1 day, 1 week, 1 month etc.
         /// It also provides input boxes where min and max dates can be manually input.
         /// </summary>
         /// <param name="rangeSelector"></param>
@@ -304,8 +304,8 @@ namespace DotNet.HighStock
         }
 
         /// <summary>
-        /// The actual series to append to the chart. In addition to the members listed below, any member of the plotOptions 
-        /// for that specific type of plot can be added to a series individually. For example, even though a general lineWidth 
+        /// The actual series to append to the chart. In addition to the members listed below, any member of the plotOptions
+        /// for that specific type of plot can be added to a series individually. For example, even though a general lineWidth
         /// is specified in plotOptions.series, an individual lineWidth can be specified for each series.
         /// </summary>
         /// <param name="series"></param>
@@ -317,8 +317,8 @@ namespace DotNet.HighStock
         }
 
         /// <summary>
-        /// The actual series to append to the chart. In addition to the members listed below, any member of the plotOptions 
-        /// for that specific type of plot can be added to a series individually. For example, even though a general lineWidth 
+        /// The actual series to append to the chart. In addition to the members listed below, any member of the plotOptions
+        /// for that specific type of plot can be added to a series individually. For example, even though a general lineWidth
         /// is specified in plotOptions.series, an individual lineWidth can be specified for each series.
         /// </summary>
         /// <param name="seriesArray">Array of series options.</param>
@@ -480,7 +480,7 @@ namespace DotNet.HighStock
             return ChartContainerHtmlString().ToString() + ChartScriptHtmlString();
         }
 
-        #endregion
+        #endregion IHtmlString Members
 
         public string GetOptions()
         {

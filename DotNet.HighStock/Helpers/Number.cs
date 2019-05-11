@@ -5,16 +5,16 @@ namespace DotNet.HighStock.Helpers
 {
     public struct Number : IComparable
     {
-        double? _DoubleNumber;
-        int? _IntNumber;
+        private double? _DoubleNumber;
+        private int? _IntNumber;
 
-        Number(double value)
+        private Number(double value)
         {
             _DoubleNumber = value;
             _IntNumber = null;
         }
 
-        Number(int value)
+        private Number(int value)
         {
             _IntNumber = value;
             _DoubleNumber = null;
@@ -27,17 +27,25 @@ namespace DotNet.HighStock.Helpers
             if (_DoubleNumber == null && _IntNumber == null)
                 throw new ArgumentException("The number is not correct.");
 
-            if (obj == null) return 1;
+            if (obj == null)
+                return 1;
 
             IComparable comparer = _DoubleNumber ?? _IntNumber;
             Number objectNumber = (Number)obj;
             return comparer.CompareTo(objectNumber._DoubleNumber ?? objectNumber._IntNumber);
         }
 
-        #endregion
+        #endregion IComparable Members
 
-        public static implicit operator Number(double value) { return new Number(value); }
-        public static implicit operator Number(int value) { return new Number(value); }
+        public static implicit operator Number(double value)
+        {
+            return new Number(value);
+        }
+
+        public static implicit operator Number(int value)
+        {
+            return new Number(value);
+        }
 
         public static Number? GetNumber(object o)
         {

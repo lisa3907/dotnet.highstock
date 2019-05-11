@@ -1,9 +1,3 @@
-using System;
-using System.Drawing;
-using DotNet.HighStock.Enums;
-using DotNet.HighStock.Attributes;
-using DotNet.HighStock.Helpers;
-
 namespace DotNet.HighStock.Options
 {
     /// <summary>
@@ -112,7 +106,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The text for the label for the "from" input box in the range selector. 
+        /// The text for the label for the "from" input box in the range selector.
         /// Defaults to From.
         /// </summary>
         public string RangeSelectorFrom
@@ -122,7 +116,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The text for the label for the "to" input box in the range selector. 
+        /// The text for the label for the "to" input box in the range selector.
         /// Defaults to To.
         /// </summary>
         public string RangeSelectorTo
@@ -132,7 +126,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The text for the label for the range selector buttons. 
+        /// The text for the label for the range selector buttons.
         /// Defaults to Zoom.
         /// </summary>
         public string RangeSelectorZoom
@@ -162,7 +156,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// An array containing the months names in abbreviated form. Corresponds to the  <code>%b</code> format in <code>Highstock.dateFormat()</code>. 
+        /// An array containing the months names in abbreviated form. Corresponds to the  <code>%b</code> format in <code>Highstock.dateFormat()</code>.
         /// Default: [ "Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" , "Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec"]
         /// </summary>
         public string[] ShortMonths
@@ -182,7 +176,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// An array containing the weekday names. 
+        /// An array containing the weekday names.
         /// Default: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
         /// </summary>
         public string[] Weekdays
@@ -190,6 +184,5 @@ namespace DotNet.HighStock.Options
             get;
             set;
         }
-
     }
 }

@@ -1,5 +1,5 @@
-﻿using System.Text;
-using Microsoft.AspNetCore.Razor.TagHelpers;
+﻿using Microsoft.AspNetCore.Razor.TagHelpers;
+using System.Text;
 
 namespace DotNet.HighStock
 {
@@ -15,7 +15,7 @@ namespace DotNet.HighStock
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [HtmlAttributeName("width")]
         public int Width
@@ -24,7 +24,7 @@ namespace DotNet.HighStock
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [HtmlAttributeName("height")]
         public int Height
@@ -33,7 +33,7 @@ namespace DotNet.HighStock
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [HtmlAttributeName("stock")]
         public HighStock Stock
