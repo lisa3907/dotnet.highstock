@@ -1,8 +1,7 @@
-using System;
-using System.Drawing;
-using DotNet.HighStock.Enums;
 using DotNet.HighStock.Attributes;
 using DotNet.HighStock.Helpers;
+using System;
+using System.Drawing;
 
 namespace DotNet.HighStock.Options
 {
@@ -12,7 +11,7 @@ namespace DotNet.HighStock.Options
     public class RangeSelector
     {
         /// <summary>
-        /// Whether to enable all buttons from the start. By default buttons are only enabled if the corresponding time range exists on the X axis, but enabling all buttons allows for dynamically loading different time ranges. 
+        /// Whether to enable all buttons from the start. By default buttons are only enabled if the corresponding time range exists on the X axis, but enabling all buttons allows for dynamically loading different time ranges.
         /// Defaults to false.
         /// </summary>
         public bool? AllButtonsEnabled
@@ -22,7 +21,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The space in pixels between the buttons in the range selector. 
+        /// The space in pixels between the buttons in the range selector.
         /// Defaults to 0.
         /// </summary>
         public Number? ButtonSpacing
@@ -42,11 +41,11 @@ namespace DotNet.HighStock.Options
 
         /// <summary>
         /// An array of configuration objects for the buttons. The individual options for each item are:
-        /// 
+        ///
         /// type: Defines the timespan, can be one of 'millisecond', 'second', 'minute', 'day', 'week', 'month', 'ytd' (year to date), 'year' and 'all'.
         /// count: Defines how many units of the defined type to use.
         /// text: The text for the button itself
-        /// 
+        ///
         /// Defaults to:<pre>buttons: [{
         ///         type: 'month',
         ///         count: 1,
@@ -78,7 +77,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// Enable or disable the range selector. 
+        /// Enable or disable the range selector.
         /// Defaults to true.
         /// </summary>
         public bool? Enabled
@@ -88,7 +87,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The border color of the date input boxes. 
+        /// The border color of the date input boxes.
         /// Defaults to silver.
         /// </summary>
         public Color? InputBoxBorderColor
@@ -98,7 +97,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The pixel height of the date input boxes. 
+        /// The pixel height of the date input boxes.
         /// Defaults to 17.
         /// </summary>
         public Number? InputBoxHeight
@@ -118,7 +117,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The pixel width of the date input boxes. 
+        /// The pixel width of the date input boxes.
         /// Defaults to 90.
         /// </summary>
         public Number? InputBoxWidth
@@ -166,7 +165,6 @@ namespace DotNet.HighStock.Options
             set;
         }
 
-
         /// <summary>
         /// CSS for the HTML inputs in the range selector.
         /// </summary>
@@ -176,7 +174,7 @@ namespace DotNet.HighStock.Options
             get;
             set;
         }
-        
+
         /// <summary>
         /// CSS styles for the labels - the Zoom, From and To texts.
         /// </summary>
@@ -188,7 +186,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The index of the button to appear pre-selected. 
+        /// The index of the button to appear pre-selected.
         /// Defaults to undefined.
         /// </summary>
         public Number? Selected

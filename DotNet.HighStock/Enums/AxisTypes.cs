@@ -1,7 +1,7 @@
 ﻿namespace DotNet.HighStock.Enums
 {
     /// <summary>
-    /// The type of axis. 
+    /// The type of axis.
     /// </summary>
     public enum AxisTypes
     {

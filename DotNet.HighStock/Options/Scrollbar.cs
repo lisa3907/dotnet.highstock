@@ -1,8 +1,5 @@
-using System;
-using System.Drawing;
-using DotNet.HighStock.Enums;
-using DotNet.HighStock.Attributes;
 using DotNet.HighStock.Helpers;
+using System.Drawing;
 
 namespace DotNet.HighStock.Options
 {
@@ -11,9 +8,8 @@ namespace DotNet.HighStock.Options
     /// </summary>
     public class Scrollbar
     {
-
         /// <summary>
-        /// The background color of the scrollbar itself. 
+        /// The background color of the scrollbar itself.
         /// Defaults to #bfc8d1.
         /// </summary>
         public Color? BarBackgroundColor
@@ -23,7 +19,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The color of the scrollbar's border. 
+        /// The color of the scrollbar's border.
         /// Defaults to #bfc8d1.
         /// </summary>
         public Color? BarBorderColor
@@ -33,7 +29,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The border rounding radius of the bar. 
+        /// The border rounding radius of the bar.
         /// Defaults to 0.
         /// </summary>
         public Number? BarBorderRadius
@@ -43,7 +39,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The width of the bar's border. 
+        /// The width of the bar's border.
         /// Defaults to 1.
         /// </summary>
         public Number? BarBorderWidth
@@ -53,7 +49,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The color of the small arrow inside the scrollbar buttons. 
+        /// The color of the small arrow inside the scrollbar buttons.
         /// Defaults to #666.
         /// </summary>
         public Color? ButtonArrowColor
@@ -63,7 +59,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The color of scrollbar buttons. 
+        /// The color of scrollbar buttons.
         /// Defaults to #ebe7e8.
         /// </summary>
         public Color? ButtonBackgroundColor
@@ -73,7 +69,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The color of the border of the scrollbar buttons. 
+        /// The color of the border of the scrollbar buttons.
         /// Defaults to #bbbbbb.
         /// </summary>
         public Color? ButtonBorderColor
@@ -83,7 +79,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The corner radius of the scrollbar buttons. 
+        /// The corner radius of the scrollbar buttons.
         /// Defaults to 0.
         /// </summary>
         public Number? ButtonBorderRadius
@@ -93,7 +89,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The border width of the scrollbar buttons. 
+        /// The border width of the scrollbar buttons.
         /// Defaults to 1.
         /// </summary>
         public Number? ButtonBorderWidth
@@ -103,7 +99,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// Enable or disable the scrollbar. 
+        /// Enable or disable the scrollbar.
         /// Defaults to true.
         /// </summary>
         public bool? Enabled
@@ -113,7 +109,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The height of the scrollbar. The height also applies to the width of the scroll arrows so that they are always squares. 
+        /// The height of the scrollbar. The height also applies to the width of the scroll arrows so that they are always squares.
         /// Defaults to 20 for touch devices and 14 for mouse devices.
         /// </summary>
         public Number? Height
@@ -123,7 +119,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// Whether to redraw the main chart as the scrollbar or the navigator zoomed window is moved. 
+        /// Whether to redraw the main chart as the scrollbar or the navigator zoomed window is moved.
         /// Defaults to true for modern browsers and false for legacy IE browsers as well as mobile devices.
         /// </summary>
         public bool? LiveRedraw
@@ -133,7 +129,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The minimum width of the scrollbar. 
+        /// The minimum width of the scrollbar.
         /// Defaults to 6.
         /// </summary>
         public Number? MinWidth
@@ -143,7 +139,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The color of the small rifles in the middle of the scrollbar. 
+        /// The color of the small rifles in the middle of the scrollbar.
         /// Defaults to #666.
         /// </summary>
         public Color? RifleColor
@@ -153,7 +149,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The color of the track background. 
+        /// The color of the track background.
         /// Defaults to #eeeeee.
         /// </summary>
         public Color? TrackBackgroundColor
@@ -163,7 +159,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The color of the border of the scrollbar track. 
+        /// The color of the border of the scrollbar track.
         /// Defaults to #eeeeee.
         /// </summary>
         public Color? TrackBorderColor
@@ -173,7 +169,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The corner radius of the border of the scrollbar track. 
+        /// The corner radius of the border of the scrollbar track.
         /// Defaults to 0.
         /// </summary>
         public Number? TrackBorderRadius
@@ -183,7 +179,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The width of the border of the scrollbar track. 
+        /// The width of the border of the scrollbar track.
         /// Defaults to 1.
         /// </summary>
         public Number? TrackBorderWidth

@@ -1,8 +1,8 @@
-﻿using System;
+﻿using DotNet.HighStock.Enums;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
-using DotNet.HighStock.Enums;
 
 namespace DotNet.HighStock
 {

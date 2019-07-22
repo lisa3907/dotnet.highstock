@@ -1,8 +1,6 @@
-using System;
-using System.Drawing;
-using DotNet.HighStock.Enums;
 using DotNet.HighStock.Attributes;
 using DotNet.HighStock.Helpers;
+using System.Drawing;
 
 namespace DotNet.HighStock.Options
 {
@@ -33,7 +31,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The symbol for the button. Points to a definition function in the 
+        /// The symbol for the button. Points to a definition function in the
         /// Highstock.Renderer.symbols collection. The default
         /// print function is part of the exporting module. Defaults to "printIcon"
         /// </summary>
@@ -62,6 +60,5 @@ namespace DotNet.HighStock.Options
             get;
             set;
         }
-
     }
 }

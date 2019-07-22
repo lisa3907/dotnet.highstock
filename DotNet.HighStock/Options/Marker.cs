@@ -4,7 +4,7 @@ using System.Drawing;
 namespace DotNet.HighStock.Options
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public class Marker
     {
@@ -55,7 +55,7 @@ namespace DotNet.HighStock.Options
 
         /// <summary>
         /// The width of the point marker's outline.
-        /// Defaults to 0. 
+        /// Defaults to 0.
         /// </summary>
         public Number? LineWidth
         {

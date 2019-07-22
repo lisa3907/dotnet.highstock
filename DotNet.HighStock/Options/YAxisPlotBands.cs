@@ -1,13 +1,11 @@
-using System;
-using System.Drawing;
-using DotNet.HighStock.Enums;
 using DotNet.HighStock.Attributes;
 using DotNet.HighStock.Helpers;
+using System.Drawing;
 
 namespace DotNet.HighStock.Options
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public class YAxisPlotBands
     {
@@ -79,7 +77,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// In a gauge chart, this option sets the width of the plot band stretching along the perimeter. It can be given as a percentage string, like <code>'10%'</code>, or as a pixel number, like <code>10</code>. The default value 10 is the same as the default <a href='#yAxis.tickLength'>tickLength</a>, thus making the plot band act as a background for the tick markers. 
+        /// In a gauge chart, this option sets the width of the plot band stretching along the perimeter. It can be given as a percentage string, like <code>'10%'</code>, or as a pixel number, like <code>10</code>. The default value 10 is the same as the default <a href='#yAxis.tickLength'>tickLength</a>, thus making the plot band act as a background for the tick markers.
         /// Default: 10
         /// </summary>
         [JsonFormatter(addPropertyName: true, useCurlyBracketsForObject: false)]

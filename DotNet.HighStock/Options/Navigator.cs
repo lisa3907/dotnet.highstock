@@ -1,8 +1,7 @@
-using System;
-using System.Drawing;
-using DotNet.HighStock.Enums;
 using DotNet.HighStock.Attributes;
 using DotNet.HighStock.Helpers;
+using System;
+using System.Drawing;
 
 namespace DotNet.HighStock.Options
 {
@@ -12,7 +11,7 @@ namespace DotNet.HighStock.Options
     public class Navigator
     {
         /// <summary>
-        /// Whether the navigator and scrollbar should adapt to updated data in the base X axis. This should be false when loading data asynchronously, to prevent circular loading. 
+        /// Whether the navigator and scrollbar should adapt to updated data in the base X axis. This should be false when loading data asynchronously, to prevent circular loading.
         /// Defaults to true.
         /// </summary>
         public bool? AdaptToUpdatedData
@@ -22,7 +21,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// An integer identifying the index to use for the base series, or a string representing the id of the series. 
+        /// An integer identifying the index to use for the base series, or a string representing the id of the series.
         /// Defaults to 0.
         /// </summary>
         public Number? BaseSeries
@@ -32,7 +31,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// Enable or disable the navigator. 
+        /// Enable or disable the navigator.
         /// Defaults to true.
         /// </summary>
         [JsonFormatter("{{ 0 }}")]
@@ -53,7 +52,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The height of the navigator. 
+        /// The height of the navigator.
         /// Defaults to 40.
         /// </summary>
         public Number? Height
@@ -63,7 +62,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The distance from the nearest element, the X axis or X axis labels. 
+        /// The distance from the nearest element, the X axis or X axis labels.
         /// Defaults to 25.
         /// </summary>
         public Number? Margin
@@ -73,7 +72,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The color of the mask covering the areas of the navigator series that are currently not visible in the main series. 
+        /// The color of the mask covering the areas of the navigator series that are currently not visible in the main series.
         /// The default color is bluish with an opacity of 0.3 to see the series below. Defaults to rgba(128,179,236,0.3).
         /// </summary>
         public Color? MaskFill
@@ -83,7 +82,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// Whether the mask should be inside the range marking the zoomed range, or outside. In Highstock 1.x it was always false. 
+        /// Whether the mask should be inside the range marking the zoomed range, or outside. In Highstock 1.x it was always false.
         /// Defaults to true.
         /// </summary>
         public bool? MaskInside
@@ -93,7 +92,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The color of the line marking the currently zoomed area in the navigator. 
+        /// The color of the line marking the currently zoomed area in the navigator.
         /// Defaults to #b2b1b6.
         /// </summary>
         public Color? OutlineColor
@@ -103,7 +102,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The width of the line marking the currently zoomed area in the navigator. 
+        /// The width of the line marking the currently zoomed area in the navigator.
         /// Defaults to 2.
         /// </summary>
         public Number? OutlineWidth

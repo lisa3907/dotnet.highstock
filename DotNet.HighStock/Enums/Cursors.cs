@@ -3,7 +3,7 @@
     public enum Cursors
     {
         /// <summary>
-        /// Default. The browser sets a cursor	
+        /// Default. The browser sets a cursor
         /// </summary>
         Auto,
 
@@ -33,7 +33,7 @@
         Pointer,
 
         /// <summary>
-        /// The cursor indicates that the program is busy (in progress)	
+        /// The cursor indicates that the program is busy (in progress)
         /// </summary>
         Progress,
 

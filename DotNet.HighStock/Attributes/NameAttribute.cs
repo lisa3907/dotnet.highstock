@@ -3,13 +3,13 @@
 namespace DotNet.HighStock.Attributes
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
     public class NameAttribute : Attribute
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="name"></param>
         public NameAttribute(string name)
@@ -18,7 +18,7 @@ namespace DotNet.HighStock.Attributes
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public string Name
         {

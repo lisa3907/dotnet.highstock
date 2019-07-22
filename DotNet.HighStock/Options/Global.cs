@@ -1,7 +1,3 @@
-using System;
-using System.Drawing;
-using DotNet.HighStock.Enums;
-using DotNet.HighStock.Attributes;
 using DotNet.HighStock.Helpers;
 
 namespace DotNet.HighStock.Options
@@ -22,7 +18,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The timezone offset in minutes. Positive values are west, negative values are east of UTC, as in the ECMAScript <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset'>getTimezoneOffset</a> method. Use this to display UTC based data in a predefined time zone. 
+        /// The timezone offset in minutes. Positive values are west, negative values are east of UTC, as in the ECMAScript <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset'>getTimezoneOffset</a> method. Use this to display UTC based data in a predefined time zone.
         /// Default: 0
         /// </summary>
         public Number? TimezoneOffset
@@ -40,6 +36,5 @@ namespace DotNet.HighStock.Options
             get;
             set;
         }
-
     }
 }

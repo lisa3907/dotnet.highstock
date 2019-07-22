@@ -1,8 +1,8 @@
+using DotNet.HighStock.Attributes;
+using DotNet.HighStock.Enums;
+using DotNet.HighStock.Helpers;
 using System;
 using System.Drawing;
-using DotNet.HighStock.Enums;
-using DotNet.HighStock.Attributes;
-using DotNet.HighStock.Helpers;
 
 namespace DotNet.HighStock.Options
 {
@@ -82,7 +82,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// In a legend with horizontal layout, the itemDistance defines the pixel distance between each item. 
+        /// In a legend with horizontal layout, the itemDistance defines the pixel distance between each item.
         /// Default: 20
         /// </summary>
         public Number? ItemDistance
@@ -211,7 +211,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// Options for the paging or navigation appearing when the legend is overflown. When <a href='#legend.useHTML'>legend.useHTML</a> is enabled, navigation is disabled. 
+        /// Options for the paging or navigation appearing when the legend is overflown. When <a href='#legend.useHTML'>legend.useHTML</a> is enabled, navigation is disabled.
         /// </summary>
         public LegendNavigation Navigation
         {
@@ -346,7 +346,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// The x offset of the legend relative to its horizontal alignment <code>align</code> within chart.spacingLeft and chart.spacingRight. Negative x moves it to the left, positive x moves it to the right. 
+        /// The x offset of the legend relative to its horizontal alignment <code>align</code> within chart.spacingLeft and chart.spacingRight. Negative x moves it to the left, positive x moves it to the right.
         /// Default: 0
         /// </summary>
         public Number? X
@@ -364,6 +364,5 @@ namespace DotNet.HighStock.Options
             get;
             set;
         }
-
     }
 }

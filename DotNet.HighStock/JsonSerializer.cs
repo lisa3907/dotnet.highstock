@@ -13,15 +13,15 @@ namespace DotNet.HighStock
 {
     public class JsonSerializer
     {
-        const string JSON_STRING_ARRAY = "['{0}']";
-        const string JSON_NUMBER_ARRAY = "[{0}]";
-        const string JSON_NUMBER_MULTI_ARRAY = "[{0}, {1}]";
-        const string JSON_OBJECT_FORMAT = "{{ {0} }}";
-        const string JSON_PROPERTY_WITH_VALUE_FORMAT = "{0}: {1}";
-        const string JSON_STRING_FORMAT = "'{0}'";
-        const string JSON_DEFAULT_FORMAT = "{0}";
-        const string JSON_DATE_FORMAT = "Date.parse('{0}')";
-        const string NULL_STRING = "null";
+        private const string JSON_STRING_ARRAY = "['{0}']";
+        private const string JSON_NUMBER_ARRAY = "[{0}]";
+        private const string JSON_NUMBER_MULTI_ARRAY = "[{0}, {1}]";
+        private const string JSON_OBJECT_FORMAT = "{{ {0} }}";
+        private const string JSON_PROPERTY_WITH_VALUE_FORMAT = "{0}: {1}";
+        private const string JSON_STRING_FORMAT = "'{0}'";
+        private const string JSON_DEFAULT_FORMAT = "{0}";
+        private const string JSON_DATE_FORMAT = "Date.parse('{0}')";
+        private const string NULL_STRING = "null";
 
         public static string Serialize<T>(T obj) where T : class
         {
@@ -36,7 +36,7 @@ namespace DotNet.HighStock
             return GetJsonObject(obj, appendCurlyBrackets);
         }
 
-        static string GetJsonArray(Array obj, bool useCurlyBracketsForObject)
+        private static string GetJsonArray(Array obj, bool useCurlyBracketsForObject)
         {
             if (obj is string[])
             {
@@ -95,7 +95,7 @@ namespace DotNet.HighStock
             throw new NotImplementedException("Not implemented serialization array of type: " + obj.GetType());
         }
 
-        static string GetJsonObject(object obj, bool appendCurlyBrackets)
+        private static string GetJsonObject(object obj, bool appendCurlyBrackets)
         {
             if (obj == null)
                 return NULL_STRING;
@@ -134,7 +134,7 @@ namespace DotNet.HighStock
             return appendCurlyBrackets ? String.Format(JSON_OBJECT_FORMAT, String.Join(", ", json)) : String.Join(", ", json);
         }
 
-        static string GetValue(object value, Type type, JsonFormatter formatter)
+        private static string GetValue(object value, Type type, JsonFormatter formatter)
         {
             if (value is string)
             {
@@ -194,18 +194,18 @@ namespace DotNet.HighStock
             return GetJsonString(format, JSON_STRING_FORMAT, GetRgbColor(color));
         }
 
-        static string GetRgbColor(Color color)
+        private static string GetRgbColor(Color color)
         {
             double htmlAlpha = (double)color.A / 255;
             return String.Format("rgba({0}, {1}, {2}, {3})", color.R, color.G, color.B, htmlAlpha.ToString("#.#", CultureInfo.InvariantCulture));
         }
 
-        static string GetJsonString(string format, string defaultFormat, string value)
+        private static string GetJsonString(string format, string defaultFormat, string value)
         {
             return String.Format(!String.IsNullOrEmpty(format) ? format : defaultFormat, value);
         }
 
-        static string GetPropertyName(PropertyInfo property)
+        private static string GetPropertyName(PropertyInfo property)
         {
             string propertyName = String.Empty;
             foreach (NameAttribute attribute in property.GetCustomAttributes(typeof(NameAttribute), true))
@@ -217,12 +217,12 @@ namespace DotNet.HighStock
             return propertyName;
         }
 
-        static string GetFirstLetterLower(string name)
+        private static string GetFirstLetterLower(string name)
         {
             return Char.ToLowerInvariant(name[0]) + name.Substring(1);
         }
 
-        static JsonFormatter GetJsonFormatter(PropertyInfo property)
+        private static JsonFormatter GetJsonFormatter(PropertyInfo property)
         {
             JsonFormatter formatter = new JsonFormatter
             {
@@ -237,7 +237,7 @@ namespace DotNet.HighStock
             return formatter;
         }
 
-        static string GetMultiDimentionArray(object[,] array)
+        private static string GetMultiDimentionArray(object[,] array)
         {
             List<string> json = new List<string>();
             for (int i = 0; i <= array.GetUpperBound(0); i++)

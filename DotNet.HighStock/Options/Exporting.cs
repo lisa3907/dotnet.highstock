@@ -52,7 +52,7 @@ namespace DotNet.HighStock.Options
         }
 
         /// <summary>
-        /// Defines the scale or zoom factor for the exported image compared to the on-screen display. While for instance a 600px wide chart may look good on a website, it will look bad in print. The default scale of 2 makes this chart export to a 1200px PNG or JPG. 
+        /// Defines the scale or zoom factor for the exported image compared to the on-screen display. While for instance a 600px wide chart may look good on a website, it will look bad in print. The default scale of 2 makes this chart export to a 1200px PNG or JPG.
         /// Default: 2
         /// </summary>
         public Number? Scale
