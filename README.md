@@ -16,9 +16,9 @@ This project started in 2014/12. I plan to update it continuously.
 
 ## Tools
 
-- Microsfot Visual Studio community 2017 version 15.7.4
+- Visual Studio community 2019
 
-- .net core 2.1, .net framework 4.6.2
+- .net core 5.0
 
 ## License
 
@@ -33,6 +33,8 @@ Read [LICENSE](LICENSE)
 ## History
 
 ```
+2021-02-17: update to .net core 5.0
+
 2018-03-29: upgrade .net core 2.0 & net47
 
 2018-07-10: upgrade .net core 2.1 & downgrade net462
