@@ -5,22 +5,22 @@
     <AssemblyName>DotNet.HighStock</AssemblyName>
     <Title>Highstock for Dotnet Core</Title>
     <Description>Highstock for .NET C# Programming</Description>
-    <Copyright>Copyright ⓒ OdinSoftware Co., Ltd. 2017~2018</Copyright>
+    <Copyright>Copyright ⓒ OdinSoftware Co., Ltd. 2015~2021</Copyright>
     <AssemblyTitle>DotNet.HighStck.Core</AssemblyTitle>
     <Authors>SEONGAHN LEE</Authors>
     <PackageId>DotNet.HighStock</PackageId>
     <PackageTags>highstocks;highstock;highcharts;highchart</PackageTags>
     <PackageProjectUrl>https://github.com/lisa3907/dotnet.highstock</PackageProjectUrl>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>2.2.2</Version>
-    <PackageReleaseNotes>nuget update</PackageReleaseNotes>
+    <Version>3.1.0</Version>
+    <PackageReleaseNotes>update to core 5.0</PackageReleaseNotes>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Html.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="2.2.0" />
-    <PackageReference Include="System.Drawing.Common" Version="5.0.0" />
+    <PackageReference Include="System.Drawing.Common" Version="5.0.1" />
     <PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
     <PackageReference Include="System.Reflection.TypeExtensions" Version="4.7.0" />
   </ItemGroup>

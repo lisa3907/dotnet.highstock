@@ -1,11 +1,12 @@
 ﻿using DotNet.HighStock.Enums;
 using DotNet.HighStock.Options;
+using DotNet.HighStock.Sample.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using OdinSdk.BaseLib.Configuration;
-using OdinSdk.BaseLib.WebApi;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -13,31 +14,24 @@ namespace DotNet.HighStock.Sample.Controllers
 {
     public class HomeController : Controller
     {
-        private static CConfig __cconfig = new CConfig();
+        private readonly ILogger<HomeController> _logger;
+        private readonly IConfiguration _configuration;
 
-        public HomeController(IConfigurationRoot config_root)
+        public HomeController(ILogger<HomeController> logger, IConfiguration configuration)
         {
-            __cconfig.SetConfigRoot(config_root);
+            _logger = logger;
+            _configuration = configuration;
         }
 
-        private CHttpClient __web_client = null;
-
-        private CHttpClient HttpClient
+        public IActionResult Privacy()
         {
-            get
-            {
-                if (__web_client == null)
-                    __web_client = new CHttpClient(__api_root_url);
-                return __web_client;
-            }
+            return View();
         }
 
-        private static string __api_root_url
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
         {
-            get
-            {
-                return __cconfig.GetAppString("api.root.url");
-            }
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
         // GET: /<controller>/
@@ -59,23 +53,6 @@ namespace DotNet.HighStock.Sample.Controllers
             return View();
         }
 
-        public IActionResult About()
-        {
-            ViewData["Message"] = "This is bitcoin price index page.";
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Our Company Contact";
-            return View();
-        }
-
-        public IActionResult Error()
-        {
-            return View();
-        }
-
         public async Task<List<ChartDataPeriod>> GetTrades(string period_type, int time_type, string dealer, string currency, string coin, int limit)
         {
             var _result = new List<ChartDataPeriod>();
@@ -90,8 +67,10 @@ namespace DotNet.HighStock.Sample.Controllers
                 _params.Add("limit", limit);
             }
 
-            var _received = await HttpClient.CallApiGetAsync<CApiResult<List<ChartDataPeriod>>>("GetTradesOneCurrency", _params);
-            _result = _received.value;
+            //var _received = await HttpClient.CallApiGetAsync<CApiResult<List<ChartDataPeriod>>>("GetTradesOneCurrency", _params);
+            //_result = _received.value;
+
+            await Task.Delay(0);
 
             return _result;
         }
